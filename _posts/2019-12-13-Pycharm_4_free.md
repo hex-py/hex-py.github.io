@@ -1,3 +1,15 @@
+---
+layout:     post
+title:      Pycharm2018 破解
+date:       2019-12-13
+author:     Hex
+header-img: img/post-bg-YesOrNo.jpg
+catalog: true
+tags:
+    - Python
+    - Pycharm
+    - 开发环境搭建
+---
 ### 下载补丁文件
 
 [补丁文件地址：](https://pan.baidu.com/s/1mcQM8CLUnweY02ahKEr4PQ)
