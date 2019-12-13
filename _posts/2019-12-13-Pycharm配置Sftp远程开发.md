@@ -3,7 +3,7 @@ layout:     post
 title:      Pycharm配置Sftp远程开发
 date:       2019-12-13
 author:     Hex
-header-img: img/post-bg-iWatch.jpg
+header-img: img/post-bg-YesOrNo.jpg
 catalog: true
 tags:
     - Python
