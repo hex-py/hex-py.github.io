@@ -107,4 +107,4 @@ theme: next
 deploy:
   - type: git
     repo: https://GH_TOKEN@github.com/hex-py/hex-py.github.io.git
-    branch: src
+    branch: master

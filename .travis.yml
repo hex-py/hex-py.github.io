@@ -24,13 +24,13 @@ script:
 after_success:
   - git config --global user.name $GIT_NAME
   - git config --global user.email $GIT_EMAIL
-  - sed -i "s/GH_TOKEN/$GH_TOKEN/g" ./_config.yml
+  - sed -i "s/GH_TOKEN/${GH_TOKEN}/g" ./_config.yml
 #  - sed -i "s/CODING_TOKEN/$CODING_TOKEN/g" ./_config.yml
   - hexo deploy -m "Travis CI Build ${TRAVIS_BUILD_NUMBER}"
 
 notifications:
   email:
     recipients:
-      - $GIT_EMAIL
+      - ${GIT_EMAIL}
     on_success: change # default: change
     on_failure: always # default: always
