@@ -59,8 +59,8 @@ footer:
 # ---------------------------------------------------------------
 
 disable_baidu_transformation: true
-google_site_verification: SJUudYL5q_atXSgew2qwy69FXOnSnNB2rAmwHmcBT9U
-baidu_push: true
+#google_site_verification: SJUudYL5q_atXSgew2qwy69FXOnSnNB2rAmwHmcBT9U
+baidu_push: false
 
 
 # ---------------------------------------------------------------
