@@ -1,9 +1,9 @@
 ---
 title: {{ title }}
 categories:
-  - Golang
+  - 个人工具
 tags:
-  - Go
+  - 个人工具
 date: '{{ date }}'
 top: false
 comments: true

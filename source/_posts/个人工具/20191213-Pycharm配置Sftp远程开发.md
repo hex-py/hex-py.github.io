@@ -1,11 +1,11 @@
 ---
 title: Pycharm配置Sftp远程开发
 categories:
-  - 环境搭建
+  - 个人工具
 tags:
   - Python
   - Pycharm
-  - 开发环境搭建
+  - 个人工具
 date: '2019-12-13 08:49:00'
 sticky: 0
 comments: true

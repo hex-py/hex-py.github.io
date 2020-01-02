@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 categories:
-  - Kubernetes备忘
+  - Kubernetes
 tags:
   - Kubernetes
 date: '{{ date }}'

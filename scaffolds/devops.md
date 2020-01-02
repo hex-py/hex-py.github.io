@@ -1,9 +1,9 @@
 ---
 title: {{ title }}
 categories:
-  - Golang
+  - Devops
 tags:
-  - Go
+  - Devops
 date: '{{ date }}'
 top: false
 comments: true

@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 categories:
-  - Python备忘
+  - Python
 tags:
   - Python
 date: '{{ date }}'
