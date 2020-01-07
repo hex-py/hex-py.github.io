@@ -84,4 +84,4 @@ pipeline:
 ![drone](https://raw.githubusercontent.com/alicfeng/gogs-drone-docker/1.0/file/image2.png)
 
 
-**[价值源于技术，技术源于分享](https://github.com/alicfeng)**
+**[价值源于技术，技术源于分享](https://github.com/hex-py)**

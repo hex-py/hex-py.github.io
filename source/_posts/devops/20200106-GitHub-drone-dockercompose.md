@@ -102,6 +102,7 @@ docker exec -it nginx ash
 容器内执行以下命令
 ```bash
 vim /etc/nginx/conf.d/drone.conf
+
 server {
     listen       80;
     server_name drone.qloud.com;
@@ -112,6 +113,7 @@ server {
         proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
     }
 }
+
 nginx -s reload
 ```
 ## 使用
