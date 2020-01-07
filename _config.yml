@@ -67,7 +67,7 @@ category_map:
   环境搭建: envSetup
   Golang学习: golang
   Python备忘: python
-  k8s备忘: kubernetes
+  kubernetes: kubernetes
   源码阅读: sourceCode
   新技术调研: newResult
   提上日程: next
