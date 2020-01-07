@@ -14,13 +14,12 @@ comments: true
 ## 前言
 `CI / CD`( 持续集成 / 持续部署  )方案是DevOps中不可或缺的流程之一，本文简单介绍选择 `Gogs` + `Drone` 通过`docker compose`部署。
 
-|主机名        | github + jenkins                                                                                      | Gogs + Drone              |NUM|
+|主机名        | gitLab + jenkins                                                                                      | Gogs + Drone              |NUM|
 |-------------|-------------------------------------------------------------------------------------------------------|---------------------------|---|
 | 成熟度       | GitLab是一个非常成熟的git工具之一，同时Jenkins也是非常成熟的CICD组件，功能非常强大。                           | 性能高，并且简单易用         | 1 |
 | 语言技术栈   | `GitLab`是使用`Ruby`编写的，`Jenkins`更是了不起，使用`Java`来编写的，项目整体比较膨大，同时它们对硬件、CPU等开销比较高 | `Drone`、`Gogs`皆是使用`Go`语言来编写构建，在整体的语言性能与内存开销算是有一定的优势 | 2 |
 
-> `Drone`支持`Github`、`GitLab`、`Gogs`以及`Bitbucket`，这点很不错！
-
+> Drone是一种基于容器技术的持续交付系统。Drone使用简单的YAML配置文件（docker-compose的超集）来定义和执行Docker容器中的Pipelines。Drone与流行的源代码管理系统无缝集成，包括GitHub，GitHub Enterprise，Gogs，Bitbucket等。
 
 
 #### 镜像说明
@@ -39,7 +38,7 @@ comments: true
 
 #### 安装
 安装非常简单，拉取`docker-compose.yml`编排文件，基于`Docker`环境自动构建即可！
-**同步至[github](https://github.com/alicfeng/gogs-drone-docker) | [戳戳戳](https://github.com/alicfeng/gogs-drone-docker)**
+
 ```shell
 git clone https://github.com/alicfeng/gogs-drone-docker.git
 cd gogs-drone-docker && docker-compose up -d
