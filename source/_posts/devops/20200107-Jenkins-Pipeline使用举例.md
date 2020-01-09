@@ -44,21 +44,24 @@ if(ver_map.containsKey(ver)){
 }
 ```
 #### 1.3 镜像版本控制  --  {ver}
-举例：jenkins配置的job名为 'qloudobp-customer-profiles'  选择 master 分支构建
-  $JOB_NAME: qloudobp-customer-profiles/master
-  name_list    : ['qloudobp-customer-profiles', 'master']
+举例：
+```
+  jenkins配置的job名为 'qloudobp-customer-profiles'  选择 master 分支构建
+  $JOB_NAME         : qloudobp-customer-profiles/master
+  name_list         : ['qloudobp-customer-profiles', 'master']
   ver               : 'master'
   job               : 'qloudobp-customer-profiles'
-  job_list        : ['qloudobp', 'customer', 'profiles']
-  project        : qloudobp
-  job_size       : 2
-  img_list       : ['customer', 'profiles']
-  img              : customer-profiles
+  job_list          : ['qloudobp', 'customer', 'profiles']
+  project           : qloudobp
+  job_size          : 2
+  img_list          : ['customer', 'profiles']
+  img               : customer-profiles
   ver               : 'latest' (重赋值)
   tag               : "reg.qloud.com/qloudobp/customer-profiles:latest"
-  script_dir    :  qloudobp/customer-profiles/latest
-  slug_dir       : /tmp/qloudobp/customer-profiles/latest
-  slug_file      : /tmp/qloudobp/customer-profiles/latest/slug.tgz
+  script_dir        :  qloudobp/customer-profiles/latest
+  slug_dir          : /tmp/qloudobp/customer-profiles/latest
+  slug_file         : /tmp/qloudobp/customer-profiles/latest/slug.tgz
+```
 
 ```groovy
     name_list     = "$JOB_NAME".split('/') 
@@ -202,7 +205,7 @@ dir('QloudMartUI/qloudmart'){
 }
 ```
 
-## 整体阅读
+## 完整示例
 #### node 项目
 jenkinsFile:
 ```groovy

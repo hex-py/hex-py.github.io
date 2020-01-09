@@ -55,7 +55,7 @@ services:
       - /path/to/logs:/var/log/mysql/:rw
   drone-server:
     image: drone/drone:1.0.0-rc.5 #不要用latest,latest并非稳定版本
-    container_name: dronetest_server
+    container_name: drone-server
     networks: 
       - dronenet
     volumes:
@@ -85,7 +85,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:rw
     environment:
-      - DRONE_RPC_SERVER=http://drone_server	                                                   #drone用的http请求包，url一定要写上协议才能支持
+      - DRONE_RPC_SERVER=http://drone-server:8000	                                               #drone用的http请求包，url一定要写上协议才能支持
       - DRONE_RPC_SECRET=YOU_KEY_ALQU2M0KdptXUdTPKcEw                                              #RPC秘钥，与drone_server中的一致
       - DRONE_DEBUG=true
 networks:
@@ -107,7 +107,7 @@ server {
     listen       80;
     server_name drone.qloud.com;
     location / {
-        proxy_pass http://dronetest_server;
+        proxy_pass http://drone-server:8000;
         proxy_set_header   Host             $host;
         proxy_set_header   X-Real-IP        $remote_addr;
         proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
@@ -211,3 +211,5 @@ pipeline:
 ```
 
 ## Reference
+[Drone CI for GitHub](https://juejin.im/post/5c81f54c5188257e826a9dc7)
+[DrONE CD for k8s](https://juejin.im/entry/5bcd760e6fb9a05d382819fa)

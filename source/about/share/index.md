@@ -15,7 +15,6 @@ comments: true
 ### 1.2 已读书目
 
 * [**Docker从入门到实战**](https://book.douban.com/subject/27178710/) 黄靖钧. 2017
-工具书.
 * [**算法图解**](https://book.douban.com/subject/26979890/). [美] Aditya · Bhargava. 2017
 * [**码农翻身**](https://book.douban.com/subject/30231515/). 刘欣. 2018
 
@@ -24,12 +23,26 @@ comments: true
 <!-- tab 开源项目@video-camera -->
 ## 2. 优秀的开源项目
 
-### 2.1 k8s
-* **超级工程** <font color=#bbb>CCTV 社会纪实</font>
+### 2.1 Kubernetes
+* [**source-code-reading-notes**](https://github.com/gosoon/source-code-reading-notes/) <font color=#bbb>k8s源码阅读笔记</font>
+主要专注 k8s 云原生实践，包括但不限于 docker、kubernetes、promethus、istio、knative、service mesh、serverless 等。
 
-### 2.2 开发
-* **纪实72小时 ドキュメント72時間** <font color=#bbb>NHK 社会纪实</font>
-用72小时不间断地拍摄记录日本的寻常生活，有欢笑有悲伤，每集看完总有一种依依不舍之情。
+### 2.2 Python
+* [**psf/requests**](https://github.com/psf/requests) 
+* [**pallets/flask**](https://github.com/pallets/flask)
+
+### 2.3 Go
+* [**hashicorp/raft**](https://github.com/hashicorp/raft) <font color=#bbb>Golang implementation of the Raft consensus protocol</font>
+Golang implementation of the Raft consensus protocol
+* [**kubernetes/kubernetes**](https://github.com/kubernetes/kubernetes) <font color=#bbb></font> 
+* [**kafka-operator**](https://github.com/banzaicloud/kafka-operator) <font color=#bbb>automate provisioning, management, autoscaling and operations of Apache Kafka clusters deployed to K8s.</font>
+* [**keycloak*](https://github.com/keycloak/keycloak-gatekeeper) <font color=#bbb>A OpenID / Keycloak Proxy service</font>
+
+### 2.4 其他
+* [**HelloGitHub**](https://hellogithub.com/) <font color=#bbb>分享 GitHub 上有趣、入门级的开源项目</font>
+各种语言的开源项目、让生活变得更美好的工具、书籍、学习笔记、教程等。通过这些项目你将学习到更多编程知识、提高自己的编程技巧、发现编程的乐趣。
+* [**awesome**](https://github.com/sindresorhus/awesome#learn)<font color=#bbb>Awesome lists</font>
+Awesome lists about all kinds of interesting topics
 
 <!-- endtab -->
 
