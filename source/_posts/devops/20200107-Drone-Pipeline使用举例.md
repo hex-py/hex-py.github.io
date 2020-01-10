@@ -5,20 +5,21 @@ categories:
 tags:
   - Devops
   - Drone
+  - Pipeline
 date: '2020-01-07 08:48:41'
 top: false
 comments: true
 ---
 
-## 重点
+# 重点
 > 1. 如果使用multi-pipeline， 则在`---`之后不能跟注释。而且multi-pipeline之间的无法共通数据，每个新的pipeline就是一个完全新的环境。
 > 2. 能在DockerFile中处理的，就不要放在drone中处理。
 > 3. 同一Pipeline不同step可以相互引用生成的文件，不同Pipeline完全独立。都是重新的目录，新的clone文件。
 > 4. `Drone Pipeline`的构建命令都是在一个容器中去执行的，比如要使用`Helm`来部署应用，就需要容器有`helm`，并能够目标`Kubernetes`集群联通。一种方式：可以自己做一个镜像，把 helm 命令和连接集群的配置文件都内置到里面去，但这样不是很灵活，不具有通用性。另一种方法： Drone 的插件机制，使用插件配置。
 
-## 示例
-#### go项目
-go项目代码： 
+# 示例
+## go项目
+### 项目 go代码： 
 
 下面是用`go-web`框架`gin`创建一个简单的 web 服务，在 GitHub 上创建一个名为 drone-demo 的代码仓库，Clone 到本地，添加名为 main.go 的文件，内容如下：
 ```go
@@ -51,7 +52,7 @@ func main() {
 go mod init dronek8s
 ```
 
-项目DockerFile： 
+### 项目DockerFile： 
 > 生产环境，建议在DockerFile中多阶段构建来将项目的构建和打包工作放在同一个 `Dockerfile`， 此处为了研究Drone的Pipeline使用，将两步分开。
 
 在项目根目录下面创建 Dockerfile 文件，内容如下：
@@ -85,7 +86,7 @@ CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o demo-app
 docker build -t hex/drone-demo .
 ```
 
-项目 `.drone.yml`
+### 项目 `.drone.yml`
 
 项目根目录下创建一个名为`.drone.yml`文件，文件内容如下：
 
@@ -183,7 +184,7 @@ kubectl get secret tiller-token-z4f6k -o jsonpath={.data.ca\\.crt} -n kube-syste
 ```
 注意： 证书信息不需要用 base64 解码。
 
-#### node项目
+## node项目
 
 ```bash
 workspace:
@@ -307,4 +308,4 @@ pipeline:
       status:  [ failure, success ]
 ```
 
-## Reference
+# Reference

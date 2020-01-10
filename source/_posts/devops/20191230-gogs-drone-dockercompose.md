@@ -7,16 +7,17 @@ tags:
   - CI/CD
   - Drone
   - Gogs
+  - Docker
 date: '2019-12-30 11:44:00'
 top: false
 comments: true
 ---
-## 重要
+# 重要
 > 1. `Drone`登录的账号需要在`Gogs`设置为管理员，他俩兄弟的账密是互通的
 > 2. `Gogs`的仓库会自动同步到`Drone`上，此时，需要在`Drone`开启激活该项目才能正常运行，激活后能在Gogs仓库WeHooks多一个记录。
 > 3. Drone默认读取的配置文件名为项目根下`.drone.yml`，如果仓库内文件名不是。需要再Drone-setting中做修改。
 
-## 前言
+# 正文
 `CI / CD`( 持续集成 / 持续部署  )方案是DevOps中不可或缺的流程之一，本文简单介绍选择 `Gogs` + `Drone` 通过`docker compose`部署。
 
 |主机名        | gitLab + jenkins                                                                                      | Gogs + Drone              |NUM|
@@ -27,13 +28,12 @@ comments: true
 > Drone是一种基于容器技术的持续交付系统。Drone使用简单的YAML配置文件（docker-compose的超集）来定义和执行Docker容器中的Pipelines。Drone与流行的源代码管理系统无缝集成，包括GitHub，GitHub Enterprise，Gogs，Bitbucket等。
 
 
-#### 镜像说明
+## 镜像说明
 
 `drone`升级使用`1.0.0-rc6`版本，此版本并非稳定版本，推荐使用`1`版本甚至是`0.8.6`更稳定的版本。`1.0`后的版本较之前而言，配置更加灵活、优化版本，同时界面也变化了。[drone](https://drone.io/)
 
 
-
-#### 环境准备
+## 环境准备
 
 使用的前提，必须符合以下条件
 - 系统安装了`Docker`，同时要安装了`Docker`编排工具`docker-compose`
@@ -41,7 +41,7 @@ comments: true
 - 安装了`git`版本控制工具
 
 
-#### 安装
+## 安装
 安装非常简单，拉取`docker-compose.yml`编排文件，基于`Docker`环境自动构建即可！
 
 docker-compose: `https://github.com/alicfeng/gogs-drone-docker.git/deployment/`
@@ -157,7 +157,7 @@ docker run -d \
            drone/drone-runner-docker:1
 ```
 
-#### 使用
+## 使用
 每当分支的代码更新的时候，Gogs会动过钩子同步通知Drone，而Drone收到通知后根据`.drone.yml`配置执行命令。
  - 通过git `clone`分支代码到容器里面
  - 单元测试, 代码静态检查
@@ -169,5 +169,5 @@ docker run -d \
 
 **[价值源于技术，技术源于分享](https://github.com/hex-py)**
 
-## Reference
+# Reference
 [Nginx代理](https://www.jianshu.com/p/5d36ccb5af88)

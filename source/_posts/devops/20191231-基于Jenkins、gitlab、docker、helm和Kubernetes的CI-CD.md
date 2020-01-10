@@ -4,13 +4,18 @@ categories:
   - Devops
 tags:
   - Devops
+  - Jenkins
+  - JenkinsFile
+  - gitlab
+  - Kubernetes
+  - Docker  
 date: '2019-12-31 07:05:19'
 top: false
 comments: true
 ---
-## 重要
+# 重要
 
-## 提前说明
+# 提前说明
 > 1. 开发人员提交代码到 Gitlab 代码仓库
 > 2. 通过 Gitlab 配置的 Jenkins Webhook 触发 Pipeline 自动构建
 > 3. Jenkins 触发构建构建任务，根据 Pipeline 脚本定义分步骤构建
@@ -21,7 +26,7 @@ comments: true
 > 8. 触发更新服务阶段，使用 Helm 安装/更新 Release
 > 9. 查看服务是否更新成功。
 
-## helm部署Jenkins
+# 部署Jenkins
 
 chart地址: `https://github.com/helm/charts/tree/master/stable/jenkins`
 
@@ -30,7 +35,7 @@ helm install --name jenkins stable/jenkins
 ```
 
 
-## backend-java
+# 1.后端服务容器化
 
 ```dockerfile
 FROM maven:3.6-alpine as BUILD
@@ -61,7 +66,7 @@ ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar","/app/poll
 > 1. 页面打包到一个jar文件`build-container-/usr/app/target/polls-0.0.1-SNAPSHOT.jar`
 > 2. 将上面jar文件添加到 `jdk-container-/app/polls.jar`目录
 
-## fronted-node
+# 2. 前段服务容器化
 
 ```dockerfile
 FROM node:alpine as BUILD
@@ -86,7 +91,7 @@ ADD nginx.conf
 > 1. 页面打包到一个build目录`build-container-/usr/src/app/build`
 > 2. 将上面目录添加到 `nginx-container-/usr/share/nginx/html`目录
 
-## Jenkins配置
+# 3. Jenkins task配置
 
 在 Pipeline 中去自定义`Slave Pod`中所需要用到的容器模板，需要什么镜像只需要在`Slave Pod Template`中声明即可，不需要安装了所有工具的`Slave`镜像。
 首先Jenkins 中 kubernetes 配置，Jenkins -> 系统管理 -> 系统设置 -> 云 -> Kubernetes区域
@@ -123,7 +128,7 @@ ADD nginx.conf
 
 如果测试出现了`Hook executed successfully: HTTP 201`则证明 Webhook 配置成功了，否则就需要检查下 Jenkins 的安全配置是否正确了。
 
-## JenkinsFile
+# 4. JenkinsFile
 
 Clone 代码 -> 代码静态分析 -> 单元测试 -> Maven 打包 -> Docker 镜像构建/推送 -> Helm 更新服务
 ```groovy
@@ -177,7 +182,8 @@ podTemplate(label: label, containers: [
 > 3. `/var/run/docker.sock` 挂载为了`docker`客户端与`Docker Daemon`通信，构建镜像。
 > 4. `label标签的定义` 使用 、`UUID`生成随机字符串，让`Slave Pod`每次的名称不一样，不会被固定在一个`Pod`上面了，而且有多个构建任务的时候就不会存在等待的情况.
 
-## Reference
+# Reference
 [k8s-deploy jenkins 动态slaves](https://www.qikqiak.com/post/kubernetes-jenkins1/)
 [jenkins pipeline 部署k8s应用](https://www.qikqiak.com/post/kubernetes-jenkins2/)
 [jenkin Blue Ocean 使用](https://www.qikqiak.com/post/kubernetes-jenkins3/)
+[jenkins-pipeline to k8s](https://www.qikqiak.com/post/complete-cicd-demonstrate-1/)

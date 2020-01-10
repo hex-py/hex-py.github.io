@@ -10,15 +10,15 @@ date: '2020-01-06 10:52:28'
 top: false
 comments: true
 ---
-## 重要
+# 重要
 > 1. ldap创建两个group`jenkins-admin`和`jenkins-manager`。并分别将用户`admin`， `operator`各自分配到两个组下。（ldapadmin工具操作用户分配组: 在用户条目上右键`View\Edit Group Membership`，选择要加入的组。
 > 2. 配置之前备份一下config.xml配置文件，方便出错恢复。文件地址`/var/lib/jenkins_home/config.xml`。
 > 3. Jenkins一旦集成LDAP认证就无法使用本地认证。因此在保存ldap配置之前多测试下ldap连接，否则配置错误就无法登录jenkins，参考后面，`解决错误配置ldap，导致无法登录问题`。
 > 4. Jenkins 的`root DN`和`User search base`需要重点注意。
 
-## 配置jenkins-ldap
+# 配置jenkins-ldap
 
-#### 0. LDAP准备
+## 0. LDAP准备
 添加jenkins相关的测试账户和组
 1. 在group这个ou里面创建2个组，名为jenkins-admin,jenkins-manager。
 2. 在ou=people下面创建4个账户，名为admin,test01,test02,test03,配置好邮箱和密码。
@@ -27,7 +27,7 @@ comments: true
 
 ![ldap-group+user](https://tvax1.sinaimg.cn/large/006hT4w1ly1gap61auymhj30bk0bejrk.jpg)
 
-#### 1. jenkins插件安装
+## 1. jenkins插件安装
 使用LDAP认证需要安装LDAP插件，安装插件有两种方法：
 
 方法一：后台插件管理里直接安装
@@ -48,7 +48,7 @@ comments: true
 
 ![jenkins-ldap-install](https://tvax1.sinaimg.cn/large/006hT4w1ly1gap6qkkd95j31040eqq3z.jpg)
 
-#### 2. 配置LDAP认证
+## 2. 配置LDAP认证
 登录Jenkins --> 系统管理 --> 全局安全配置
 
 ![jenkin-global-sec-config](https://tvax1.sinaimg.cn/large/006hT4w1ly1gap6r9uyv0j30wq0ed0tz.jpg)
@@ -79,14 +79,14 @@ comments: true
 ![jekins-ldap-test](https://tvax1.sinaimg.cn/large/006hT4w1ly1gap7kydsxpj30n60a20sz.jpg)
 
 
-#### 3. 配置ldap分组认证
+## 3. 配置ldap分组认证
 操作步骤: 选择 `jenkins` -> `系统管理`-> `全局安全设置` -> `访问控制` -> `ldap` -> `授权策略`，选择安全矩阵授权策略。
 
 ![image](https://tvax1.sinaimg.cn/large/006hT4w1ly1gap85k0n35j310g0m0jvt.jpg)
 
 
-## 备注
-#### 解决错误配置ldap，导致无法登录问题
+# 备注
+## 解决错误配置ldap，导致无法登录问题
 为方便用户管理，想通过ldap集中式认证，接入harbor， Gogs， Gitlab， Jenkins，省去每个系统分别创建账号，并管理的问题。但Jenkins集成LDAP配置不当导致Jenkins无法登陆。下面是解决办法：
 
 1. 首先在配置LDAP之前，可以先备份配置文件`/var/lib/jenkins_home/config.xml`， ldap的配置只会影响这个文件，可以在无法登录时，重新还原该文件，并重启jenkins服务.
@@ -130,7 +130,7 @@ comments: true
    </securityRealm>
 ```
 
-## Reference
+# Reference
 [Jenkins ldap配置不当导致无法登录](https://www.58jb.com/html/jenkins_ldap_login_failure.html)
 [运维吧-ldap4-Jenkins集成OpenLDAP认证](https://www.cnblogs.com/37Y37/p/9430272.html)
 [ldap-jenkins](https://www.cnblogs.com/zhaojiedi1992/p/zhaojiedi_liunx_52_ldap_for_jenkins.html)

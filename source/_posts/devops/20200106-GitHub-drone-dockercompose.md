@@ -6,16 +6,18 @@ tags:
   - Devops
   - Drone
   - CI/CD
+  - Deployment
+  - Docker
 date: '2020-01-06 02:20:58'
 top: false
 comments: true
 ---
 
-## 申请Github OAuth Application
+# 申请Github OAuth Application
 > Github OAuth Application是为了授权`Drone Server`读取`Github`信息。
 [参考连接](https://blog.yiranzai.cn/posts/26845/)
 
-## 部署drone+mysql+nginx
+# 部署drone+mysql+nginx
 
 部署的组件
 + Drone-server (中央Drone服务器)
@@ -116,7 +118,7 @@ server {
 
 nginx -s reload
 ```
-## 使用
+# 使用
 
 + 1. 创建仓库，并保证仓库中存在`.drone.yml`文件;
 + 2. 访问drone服务， 并刷新。找到刷新出的新项目,点击active;
@@ -210,6 +212,6 @@ pipeline:
       status: [ failure ]
 ```
 
-## Reference
+# Reference
 [Drone CI for GitHub](https://juejin.im/post/5c81f54c5188257e826a9dc7)
 [DrONE CD for k8s](https://juejin.im/entry/5bcd760e6fb9a05d382819fa)

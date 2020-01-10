@@ -11,9 +11,9 @@ sticky: 0
 comments: true
 ---
 
-## 配置pycharm 同步代码至docker容器
+# 配置pycharm 同步代码至docker容器
 [参考连接](https://zhuanlan.zhihu.com/p/52827335)
-### 容器配置
+## 容器配置
 1. 22端口暴露：
     ```bash
     docker run --name chartbackend -d -p 5556:5555 -p8022:22 reg.qloudhub.com/qloudpaas/chartbackend:latest4
@@ -34,7 +34,9 @@ comments: true
     # 查看用户
     whoami
     ```
-### pycharm配置
+
+## pycharm配置
+
 1. add sftp server
 > PyCharm  Tools > Deployment > Configuration
 

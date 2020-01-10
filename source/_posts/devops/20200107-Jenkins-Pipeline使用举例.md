@@ -10,27 +10,26 @@ date: '2020-01-07 08:48:13'
 top: false
 comments: true
 ---
-## 重点
+# 重点
 > 1. 能在DockerFile中做的，比如多阶段构建，就在dockerfile中做。不能再jenkinsfile中做太多特例化的事情，否则不好管理迁移。
 > 2. 如果有时间，可以做一个简单的ui来配置生成jenkinsfile，这样就可以省去开发学习jenkinsFile的成本。也可以限制住，把控标准。
 
-## JenkinsFile 文档目录
+# JenkinsFile 文档目录
 
 1. 拉代码
 2. 代码构建
-3. 构建镜像
-4. 推送镜像
-5. 推送初始化脚本
-6. 推送chart
+3. 构建+推送镜像
+4. 推送初始化脚本
+5. 推送chart
 
 
-### 1. 拉带码
+## 1 拉带码
 ```groovy
     stage('Check out') {
         checkout scm
     }
 ```
-#### 1.1 镜像版本控制  --  {ver}
+### 1.1 镜像版本控制  --  {ver}
 master  --> latest
 release --> stable
 TAG       --> 保持不便 
@@ -43,7 +42,7 @@ if(ver_map.containsKey(ver)){
     ver = ver_map.get(ver)
 }
 ```
-#### 1.3 镜像版本控制  --  {ver}
+### 1.2 镜像版本控制  --  {ver}
 举例：
 ```
   jenkins配置的job名为 'qloudobp-customer-profiles'  选择 master 分支构建
@@ -88,8 +87,8 @@ if(ver_map.containsKey(ver)){
     def slug_file = "'${slug_dir}'/qloudmart.tgz"
 ```
 
-### 2. 代码构建
-#### 2.1 mvn项目构建
+## 2. 代码构建
+### 2.1 mvn项目构建
 ```groovy
     def mvnHome   = tool 'maven_3_5_4'
     
@@ -99,7 +98,7 @@ if(ver_map.containsKey(ver)){
         }
     }
 ```
-#### 2.2 Node项目构建
+### 2.2 Node项目构建
 ```groovy
     def nodeHome  = tool 'NodeJS_8.12'
     stage('Build') {
@@ -116,7 +115,7 @@ if(ver_map.containsKey(ver)){
     }
 ```
 
-#### 3. Build+Push 镜像
+## 3. Build+Push 镜像
 ```groovy
 def script_dir= project+'/'+img+'/'+ver
 def slug_dir  = "/tmp/'${script_dir}'"
@@ -138,7 +137,7 @@ stage('Docker build') {
 }
 ```
 
-#### 5. 推送初始化脚本
+## 4. 推送初始化脚本
 项目根目录下如果没有/deploy/install.sh 那么说明该项目不需要初始化脚本，paas
 ```groovy
 stage('Send script') {
@@ -152,7 +151,7 @@ stage('Send script') {
 }
 ```
 
-#### 6. 推送chart
+## 5. 推送chart
 ```groovy
 stage('Send Helm') {
     def gitUrl = 'https://192.168.11.21/plugins/git/qloudlet/charts.git'
@@ -162,7 +161,8 @@ stage('Send Helm') {
     curl -X POST "http://192.168.11.130:8081/service/rest/v1/components?repository=market" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "helm.asset=@qloudmonitor-1.2.1.tgz;type=application/x-compressed-tar"
 }
 ```
-#### 7. 清理环境
+## 6. 清理环境
+
 ```groovy
 stage('Cleanup') {
     withEnv(["PATH+MAVEN=${ mvnHome }/bin"]) {
@@ -173,13 +173,14 @@ stage('Cleanup') {
     sh "rm -rf *"
     sh "rm -rf .git"
 }
-``` 
+```
 
-## 项目个性化需求
+# 项目个性化需求
 
-#### 前端命令
-如果   job名末尾为‘-onlyapi’   ng命令为 “ng build -c=onlyApi”
-否则                                           ng命令为 “ng build --prod”
+## 前端命令
+
+如果job名末尾为`-onlyapi` ng命令为 `ng build -c=onlyApi`
+                否则     ng命令为 `ng build --prod`
 
 ```groovy
 def nodeHome  = tool 'NodeJS_8.12'
@@ -197,7 +198,7 @@ withEnv(["PATH+NODE=${ nodeHome }/bin"]) {
 }
 ```
 
-#### 在某个目录下执行命令
+## 在某个目录下执行命令
 ```groovy
 //例 在 **.git/QloudMartUI 目录下 执行编译命令
 dir('QloudMartUI/qloudmart'){
@@ -205,8 +206,8 @@ dir('QloudMartUI/qloudmart'){
 }
 ```
 
-## 完整示例
-#### node 项目
+# 完整示例
+## node 项目
 jenkinsFile:
 ```groovy
 node {
@@ -339,7 +340,7 @@ EXPOSE 8080
 #  "url":"http://49.4.93.173:32090"
 #}
 ```
-#### maven 项目
+## maven 项目
 jenkinsFile:
 ```groovy
 node {
