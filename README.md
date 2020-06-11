@@ -23,12 +23,6 @@ yarn install
 npm install hexo-generator-searchdb --save
 npm install -g hexo-cli
 npm install -g hexo@3.9.0
-vccvc
-# 创建博客（不能带空格，不能加特殊字符）
-make k8s TITLE='解析k8s-yaml成client-go中的data-structs'
-#make ps TITLE='Registry配置keycloak作为认证服务'
-#make self TITLE='Gland使用技巧'
-#make golang TITLE='Go-Modules版本控制和依赖管理'
 
 # local start
 hexo g
@@ -40,3 +34,10 @@ hexo clean
 ```
 
 # write 
+```bash
+# 创建博客（不能带空格，不能加特殊字符）
+make k8s TITLE='解析k8s-yaml成client-go中的data-structs'
+#make ps TITLE='Registry配置keycloak作为认证服务'
+#make self TITLE='Gland使用技巧'
+#make golang TITLE='Go-Modules版本控制和依赖管理'
+```
