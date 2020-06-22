@@ -40,4 +40,11 @@ make k8s TITLE='解析k8s-yaml成client-go中的data-structs'
 #make ps TITLE='Registry配置keycloak作为认证服务'
 #make self TITLE='Gland使用技巧'
 #make golang TITLE='Go-Modules版本控制和依赖管理'
+
+# 创建草稿
+hexo new draft hexo常用命令备忘录
+# 本机预览草稿
+hexo S --draft
+# 将草稿发布为正式文章
+hexo P hexo常用命令备忘录
 ```
