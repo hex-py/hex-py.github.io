@@ -22,6 +22,8 @@ comments: true
 
 **[Golang: Making HTTP Requests](http://polyglot.ninja/golang-making-http-requests/)**
 
-[**Creating an API Client in Go**](https://www.scaledrone.com/blog/creating-an-api-client-in-go/)
+**[^Creating an API Client in Go](https://www.scaledrone.com/blog/creating-an-api-client-in-go/)**
+
+**[^^golang-making-http-requests](http://polyglot.ninja/golang-making-http-requests/)**
 
 **[Don’t use Go’s default HTTP client (in production)](https://medium.com/@nate510/don-t-use-go-s-default-http-client-4804cb19f779)**
