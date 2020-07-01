@@ -269,7 +269,7 @@ valine:
 # Gitalk
 # Demo: https://gitalk.github.io
 gitalk:
-  enable: true
+  enable: false
   github_id:  hex-py
   repo:  hex-py.github.io
   client_id:  793de63cbfd7648a9895
