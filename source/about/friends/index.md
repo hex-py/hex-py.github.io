@@ -8,3 +8,4 @@ comments: true
 + [阳明的博客](https://www.qikqiak.com/archives/)<font color=#bbb> [DevOps Kubernetes]-[详细+深入]</font>
 + [ljchen's Notes](http://ljchen.net/)<font color=#bbb> [consul istio  Kubernetes]-[详细]</font>
 + [田飞雨](https://blog.tianfeiyu.com)<font color=#bbb> [Kubernetes 源码阅读]-[详细]</font>
++ [煎鱼](https://eddycjy.com/posts/)<font color=#bbb> [gin 使用 example]-[详细]</font>
