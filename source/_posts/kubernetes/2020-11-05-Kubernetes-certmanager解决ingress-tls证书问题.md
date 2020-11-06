@@ -25,6 +25,8 @@ CertManager: 1.0.4
 一种资源清单部署（[install with regular manifests](https://cert-manager.io/docs/installation/kubernetes/#installing-with-regular-manifests)）
 另一种是helm-chart部署（[install with helm](https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm)）
 
+注意, 默认配置在`certificate`删除时,它所创建的`secret`不会被删除; 如果想要`Secret`同步被删除,需要在部署时指定参数`--enable-certificate-owner-ref=true`.
+
 ## 1. 资源清单部署
 > 由于工作环境使用的k8s环境版本为1.15.6，<1.16.
 ```bash
