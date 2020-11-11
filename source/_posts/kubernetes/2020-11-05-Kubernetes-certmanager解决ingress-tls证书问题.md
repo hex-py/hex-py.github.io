@@ -225,3 +225,7 @@ spec:
 [chart](https://artifacthub.io/packages/helm/jetstack/cert-manager/1.0.4)
 [github](https://github.com/jetstack/cert-manager)
 [当证书被删除，Secret会被留下](https://github.com/jetstack/cert-manager/issues/2993)
+[当证书被删除，Secret会被留下2](https://github.com/jetstack/cert-manager/issues/296)
+
+[github-示例项目](https://github.com/hex-py/cert-manager-example.git)
+[Automatic TLS certificates with cert-manager and ingress-nginx](https://atelierhsn.com/2020/07/cert-manager-ingress/)
