@@ -66,6 +66,14 @@ uid: 范围为0~65535（Ubuntu中为65533），0~999留给系统用户，普通�
 当设置runAsNoneRoot后，往往会带来权限问题。比如有些私有云挂卷后，权限默认给的755权限。此时普通用户没有写权限，导致无法使用。所以需要
 
 # Reference
+Ubuntu下的用户权限
+
+[Ubuntu下的用户权限](https://blog.csdn.net/u012668018/article/details/37727517)
+
+[/etc/passwd下的uid范围说明](https://blog.csdn.net/loryliu/article/details/24228045)
+
+[/etc/passwd详细解释](https://blog.csdn.net/m0_37605642/article/details/97136282?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.pc_relevant_is_cache&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.pc_relevant_is_cache)
+
 容器这种uid说明
 
 [理解 docker 容器中的 uid 和 gid](https://www.cnblogs.com/sparkdev/p/9614164.html)
@@ -79,6 +87,12 @@ uid: 范围为0~65535（Ubuntu中为65533），0~999留给系统用户，普通�
 [k8s文档--为pod配置安全性上下文](https://kubernetes.io/zh/docs/tasks/configure-pod-container/security-context/)
 
 [源码剖析--SecurityContext](https://developer.aliyun.com/article/777651)
+
+**[docker挂载volume的用户权限问题](https://www.cnblogs.com/woshimrf/p/understand-docker-uid.html)**
+
+[Docker mounting volume. Permission denied](https://stackoverflow.com/questions/47197493/docker-mounting-volume-permission-denied)
+
+k8s挂载宿主机卷解决权限问题：securityContext fsgroup
 
 为非root用户启动的pod挂卷
 

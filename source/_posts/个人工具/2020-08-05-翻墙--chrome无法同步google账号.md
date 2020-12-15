@@ -1,11 +1,11 @@
 ---
-title: 翻墙--docker拉取镜像
+title: 翻墙--chrome无法同步Google账号
 categories:
   - 个人工具
 tags:
   - 个人工具
-  - docker
   - v2ray
+  - chrome
 date: '2020-08-05 05:53:29'
 top: false
 comments: true

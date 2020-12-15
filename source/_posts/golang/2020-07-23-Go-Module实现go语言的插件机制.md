@@ -148,4 +148,6 @@ import (
 
 # Reference
 
-[Go语言工厂模式自动注册](http://c.biancheng.net/view/92.html)
+Useful [Go语言工厂模式自动注册](http://c.biancheng.net/view/92.html)
+[借鉴caddy插件机制博客](https://mritd.me/2018/10/23/golang-code-plugin/)
+[Go-Plugin机制说明、简单示例](https://www.jianshu.com/p/ad19dbc25e6c)
