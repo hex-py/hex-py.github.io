@@ -6,7 +6,8 @@ tags:
   - 个人工具
   - ubuntu
   - snap
-  - 
+  - appimage
+  - snap
 date: '2020-04-23 09:09:56'
 top: false
 comments: true
