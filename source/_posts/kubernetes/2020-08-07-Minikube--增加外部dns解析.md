@@ -28,6 +28,10 @@ coredns不能解析物理机的hostname。k8s-coredns默认配置从本机`/etc/
 nameserver 192.168.100.254
 ```
 2. 修改coredns配置文件 ConfigMap `coredns`
+```bash
+kubectl -n kube-system edit configmap coredns
+```
+
 ```yaml
 apiVersion: v1
 data:
@@ -58,12 +62,11 @@ metadata:
 配置修改后，需要重启coredns服务
 > 查询coredns 的POD
 ```bash
-kubectl -n kube-system  get pods |grep coredns
+kubectl -n kube-system get pods -l k8s-app=kube-dns
 ```
 > 删除 coredns 让 k8s 重新创建新的 coredns
 ```bash
-kubectl -n kube-system delete pod coredns-8686dcc4fd-4bpqs
-kubectl -n kube-system delete pod coredns-8686dcc4fd-xsd5h
+kubectl -n kube-system delete pod -l k8s-app=kube-dns
 ```
 
 ## 2. 通过hosts添加自定义DNS解析记录
