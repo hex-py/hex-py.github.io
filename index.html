@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic|Long Cang:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://hex-py.github.io').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: true,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="个人技术博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hex Blog">
+<meta property="og:url" content="https://hex-py.github.io/index.html">
+<meta property="og:site_name" content="Hex Blog">
+<meta property="og:description" content="个人技术博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Hex">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://hex-py.github.io/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Hex Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154554671-1"></script>
+    <script pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-154554671-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hex Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle"> 大胆假设 小心求证 认真做事 严谨做人 </p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>博客首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>文章归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类专栏</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>各种标签</a>
+
+  </li>
+        
+            
+  <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-location-arrow"></i>关于更多</a>
+
+  </li>
+
+
+      
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>站点搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2021/01/14/bash-2021-01-14-shell%E5%9F%BA%E7%A1%80%E4%B9%8BEOF%E7%9A%84%E7%94%A8%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/14/bash-2021-01-14-shell%E5%9F%BA%E7%A1%80%E4%B9%8BEOF%E7%9A%84%E7%94%A8%E6%B3%95/" class="post-title-link" itemprop="url">shell基础之EOF的用法</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2021-01-14 07:25:14" itemprop="dateCreated datePublished" datetime="2021-01-14T07:25:14+08:00">2021-01-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Bash/" itemprop="url" rel="index">
+                    <span itemprop="name">Bash</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/01/14/bash-2021-01-14-shell%E5%9F%BA%E7%A1%80%E4%B9%8BEOF%E7%9A%84%E7%94%A8%E6%B3%95/" class="post-meta-item leancloud_visitors" data-flag-title="shell基础之EOF的用法" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><p>EOF是（END Of File）的缩写，表示自定义终止符。既然自定义，那么EOF就不是固定的，可以随意设置别名，在linux按ctrl-d 就代表EOF。</p>
+<p>EOF一般会配合cat能够多行文本输出。</p>
+<h1 id="2-用法说明"><a href="#2-用法说明" class="headerlink" title="2. 用法说明"></a>2. 用法说明</h1><p>其用法如下：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;EOF        <span class="comment">#开始</span></span><br><span class="line">....         <span class="comment">#输入内容</span></span><br><span class="line">EOF          <span class="comment">#结束</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>还可以自定义，比如自定义：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#开始</span></span><br><span class="line">&lt;&lt;ABC        </span><br><span class="line">....</span><br><span class="line"><span class="comment"># 结束</span></span><br><span class="line">ABC</span><br></pre></td></tr></tbody></table></figure>
+
+<p>通过cat配合重定向能够生成文件并追加操作，在它之前先熟悉几个特殊符号<br><code>&lt;</code>:  输入重定向<br><code>&gt;</code>:  输出重定向<br><code>&gt;&gt;</code>: 输出重定向,进行追加,不会覆盖之前内容<br><code>&lt;&lt;</code>: 标准输入来自命令行的一对分隔号的中间内容</p>
+<p>例子1：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF</span><br><span class="line">hello</span><br><span class="line">EOF</span><br></pre></td></tr></tbody></table></figure>
+<p>输出为：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello</span><br></pre></td></tr></tbody></table></figure>
+
+<p>我们知道cat的操作对象是文件，但是例1中cat的操作对象不是文件，而是用户输入；那么我们可以这样理解例1：先在文件file中输入“Hello”，再用cat file输出其中的内容。<br>也就是说我们可以用一个文件来替代”&lt;&lt; EOF EOF”。</p>
+<p>反过来说，如果操作命令中的文件是输入对象，也可以用”&lt;&lt; EOF EOF”来替代的。</p>
+<p>例子2：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 创建1.txt文件，文件中有字段`abc`</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"abc"</span> &gt; 1.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 向文件1.txt输入覆盖内容（也可以：cat &gt; 1.txt &lt;&lt;EOF）</span></span><br><span class="line">cat &lt;&lt;EOF &gt; 1.txt </span><br><span class="line">11</span><br><span class="line">aa</span><br><span class="line">bb</span><br><span class="line">lol</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># "&lt;&lt; EOF EOF" 的作用是在命令执行过程中用户自定义输入，它类似于起到一个临时文件的作用，只是比使用文件更方便灵活。</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="3-cat-lt-lt-EOF-与-cat-lt-lt-EOF-的区别"><a href="#3-cat-lt-lt-EOF-与-cat-lt-lt-EOF-的区别" class="headerlink" title="3. cat <<EOF 与 cat <<-EOF 的区别"></a>3. <code>cat &lt;&lt;EOF</code> 与 <code>cat &lt;&lt;-EOF</code> 的区别</h1><p>两个都是获取stdin，并在EOF处结束stdin，输出stdout。</p>
+<p>使用<code>cat &lt;&lt;EOF</code>时，输入完成后，需要在一个新的一行输入EOF结束stdin的输入。EOF必须顶行写，前面不能用制表符或者空格。<br>使用<code>cat &lt;&lt;-EOF</code>时，分界符（EOF）所在行的开头部分的制表符（Tab）都将被去除。这可以解决由于脚本中的自然缩进产生的制表符。</p>
+<p>如果结束分解符EOF前有制表符或者空格，则EOF不会被当做结束分界符，只会继续被当做stdin来输入。所以会报如下报错</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.sh: line 5: warning: here-document at line 1 delimited by end-of-file (wanted `EOF')</span><br></pre></td></tr></tbody></table></figure>
+<p>脚本内容如下：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">cat &lt;&lt;EOF</span><br><span class="line">你好，EOF！</span><br><span class="line">EOF</span><br></pre></td></tr></tbody></table></figure>
+<p>正确写法如下 - 2种：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 虽然最后的EOF前面有多个制表符和空格，但仍然会被当做结束分界符，表示stdin的结束。</span></span><br><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">cat &lt;&lt;EOF</span><br><span class="line"></span><br><span class="line">你好，EOF！</span><br><span class="line"></span><br><span class="line">EOF</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 虽然最后的EOF前面有多个制表符和空格，但仍然会被当做结束分界符，表示stdin的结束。</span></span><br><span class="line">cat &lt;&lt;-EOF</span><br><span class="line"></span><br><span class="line">你好，EOF！</span><br><span class="line"></span><br><span class="line">      EOF</span><br></pre></td></tr></tbody></table></figure>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/12/28/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-12-28-GIT-%E9%85%8D%E7%BD%AEproxy%E5%B9%B6%E5%BF%BD%E7%95%A5%E5%86%85%E7%BD%91%E4%BB%93%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/28/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-12-28-GIT-%E9%85%8D%E7%BD%AEproxy%E5%B9%B6%E5%BF%BD%E7%95%A5%E5%86%85%E7%BD%91%E4%BB%93%E5%BA%93/" class="post-title-link" itemprop="url">GIT-配置proxy并忽略内网仓库</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-12-28 04:13:36" itemprop="dateCreated datePublished" datetime="2020-12-28T04:13:36+08:00">2020-12-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">个人工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/12/28/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-12-28-GIT-%E9%85%8D%E7%BD%AEproxy%E5%B9%B6%E5%BF%BD%E7%95%A5%E5%86%85%E7%BD%91%E4%BB%93%E5%BA%93/" class="post-meta-item leancloud_visitors" data-flag-title="GIT-配置proxy并忽略内网仓库" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><p>实现的状态</p>
+<ul>
+<li>github仓库走代理</li>
+<li>内网仓库不走代理</li>
+</ul>
+<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><p>由于github仓库拉取缓慢，所以配置了代理； 但内网仓库拉取也走了代理，导致出现以下报错</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hex@hex-pc:~/example-repo$ git pull </span><br><span class="line">fatal: unable to access <span class="string">'https://git.service.rd/plugins/git/example-repo.git/'</span>: gnutls_handshake() failed: The TLS connection was non-properly terminated.</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="解决办法-推荐"><a href="#解决办法-推荐" class="headerlink" title="解决办法(推荐)"></a>解决办法(推荐)</h1><p>git是可以根据环境变量的配置，声明代理并将内网地址配置不走代理，实现此功能，但要注意格式。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> https_proxy=http://127.0.0.1:10800/</span><br><span class="line"><span class="built_in">export</span> http_proxy=http://127.0.0.1:10800/</span><br><span class="line"><span class="built_in">export</span> all_proxy=socks://127.0.0.1:1088/</span><br><span class="line"><span class="built_in">export</span> ftp_proxy=http://127.0.0.1:10800</span><br><span class="line"></span><br><span class="line"><span class="comment"># 声明内网不走proxy的服务 声明域名作为通配，以空格分隔。</span></span><br><span class="line"><span class="built_in">export</span> no_proxy=<span class="string">".service.rd .icos.city 127.0.0.1 localhost"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="修改本地库-local配置"><a href="#修改本地库-local配置" class="headerlink" title="修改本地库-local配置"></a>修改本地库-local配置</h1><p>也可以针对仓库设置git config。可以设置本地库全局配置，也可以只设置单一远端。</p>
+<ol>
+<li><p>已有仓库,进入仓库目录下，并添加一个“空”代理（仓库级别）。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> --add http.proxy <span class="string">""</span></span><br></pre></td></tr></tbody></table></figure>
+<p>在仓库目录下<code>&lt;repo_path&gt;/.git/config</code>，会出现以下内容</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[core]</span><br><span class="line">	repositoryformatversion = 0</span><br><span class="line">	filemode = true</span><br><span class="line">	bare = false</span><br><span class="line">	logallrefupdates = true</span><br><span class="line">[remote "origin"]</span><br><span class="line">	url = https://git.service.rd/plugins/git/example.git</span><br><span class="line">	fetch = +refs/heads/*:refs/remotes/origin/*</span><br><span class="line">[branch "master"]</span><br><span class="line">	remote = origin</span><br><span class="line">	merge = refs/heads/master</span><br><span class="line">[http]</span><br><span class="line">	proxy =</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>已有仓库，进入仓库目录下，添加一个”空“代理（固定remote级别）。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> --add remote.&lt;name&gt;.proxy <span class="string">""</span></span><br></pre></td></tr></tbody></table></figure>
+<p>执行下面命令查看</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> --get remote.&lt;name&gt;.proxy</span><br></pre></td></tr></tbody></table></figure>
+
+</li>
+</ol>
+<h1 id="修改全局配置（只能针对单库）"><a href="#修改全局配置（只能针对单库）" class="headerlink" title="修改全局配置（只能针对单库）"></a>修改全局配置（只能针对单库）</h1><p>修改 <code>~/.gitconfig</code>文件，增加以下内容</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[http]</span><br><span class="line">   sslVerify = true</span><br><span class="line">[http "https://git.service.rd/plugins/git/example-repo.git"]</span><br><span class="line">   sslVerify = false</span><br><span class="line">   ptoxy =</span><br></pre></td></tr></tbody></table></figure>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/11/18/persistence-2020-11-18-S3fs-%E5%88%A9%E7%94%A8s3%E4%BD%9C%E4%B8%BA%E5%BC%B9%E6%80%A7%E6%96%87%E4%BB%B6%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/18/persistence-2020-11-18-S3fs-%E5%88%A9%E7%94%A8s3%E4%BD%9C%E4%B8%BA%E5%BC%B9%E6%80%A7%E6%96%87%E4%BB%B6%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88/" class="post-title-link" itemprop="url">S3fs-利用s3作为弹性文件存储方案</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-11-18 07:29:37" itemprop="dateCreated datePublished" datetime="2020-11-18T07:29:37+08:00">2020-11-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Persistence/" itemprop="url" rel="index">
+                    <span itemprop="name">Persistence</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/11/18/persistence-2020-11-18-S3fs-%E5%88%A9%E7%94%A8s3%E4%BD%9C%E4%B8%BA%E5%BC%B9%E6%80%A7%E6%96%87%E4%BB%B6%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88/" class="post-meta-item leancloud_visitors" data-flag-title="S3fs-利用s3作为弹性文件存储方案" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><p>s3fs使用fuse挂载s3 bucket到Linux或Mac系统,并且支持在Docker容器内部以非特权用户挂载s3 bucket。</p>
+<h1 id="安装s3fs"><a href="#安装s3fs" class="headerlink" title="安装s3fs"></a>安装s3fs</h1><p>在容器内使用s3fs,需要在Docker镜像中安装s3fs,以下是主流发行版安装方法:</p>
+<ul>
+<li><p>Debian 9 and Ubuntu 16.04 or newer:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install s3fs</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>RHEL and CentOS 7 or newer through via EPEL:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install epel-release</span><br><span class="line">sudo yum install s3fs-fuse</span><br></pre></td></tr></tbody></table></figure>
+
+
+</li>
+</ul>
+<h1 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h1><ol>
+<li><p>/etc/fuse.conf文件中配置说明</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>user_allow_other</td>
+<td>允许非root用户使用allow_other 挂载选项</td>
+<td>no value</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+   <hr>
+
+<ol start="2">
+<li><p>挂载选项说明</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>use_path_request_style</td>
+<td>非AWS实现的S3服务,设置此参数,配合url使用</td>
+<td>no value</td>
+</tr>
+<tr>
+<td>url</td>
+<td>S3服务的URL</td>
+<td><a href="http://obs.cn-north-4.myhuaweicloud.com" target="_blank" rel="noopener">http://obs.cn-north-4.myhuaweicloud.com</a></td>
+</tr>
+<tr>
+<td>allow_other</td>
+<td>允许非root用户挂载</td>
+<td>no vaule</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<hr>
+
+<h1 id="部署服务"><a href="#部署服务" class="headerlink" title="部署服务"></a>部署服务</h1><ul>
+<li><p>通过fstab挂载</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">echo ACCESS_KEY_ID:SECRET_ACCESS_KEY &gt; ~/.passwd-s3fs</span><br><span class="line">sed -i 's/\#user_allow_other/user_allow_other/g' /etc/fuse.conf</span><br><span class="line">mkdir /mnt/s3</span><br><span class="line">rke-test /mnt/s3 fuse.s3fs _netdev,allow_other,use_path_request_style,url=http://obs.cn-north-4.myhuaweicloud.com / 0 0</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>通过命令挂载</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">echo ACCESS_KEY_ID:SECRET_ACCESS_KEY &gt; ~/.passwd-s3fs</span><br><span class="line">sed -i 's/\#user_allow_other/user_allow_other/g' /etc/fuse.conf</span><br><span class="line">mkdir /mnt/s3</span><br><span class="line">s3fs rke-test /mnt/s3 -o _netdev -o allow_other -o use_path_request_style -o url=http://obs.cn-north-4.myhuaweicloud.com</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>容器内命令挂载</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name ranger  --cap-add mknod --cap-add sys_admin --security-opt apparmor:unconfined --device=/dev/fuse reg.chebai.org/paas/ranger:latest</span><br><span class="line">docker exec -it -u 1000 ranger bash</span><br><span class="line">echo ACCESS_KEY_ID:SECRET_ACCESS_KEY &gt; ~/.passwd-s3fs</span><br><span class="line">sed -i 's/\#user_allow_other/user_allow_other/g' /etc/fuse.conf</span><br><span class="line">mkdir /mnt/s3</span><br><span class="line">s3fs rke-test /mnt/s3 -o _netdev -o allow_other -o use_path_request_style -o url=http://obs.cn-north-4.myhuaweicloud.com</span><br></pre></td></tr></tbody></table></figure>
+
+
+</li>
+</ul>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><ol>
+<li><p>确定已成功挂载</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount | grep s3</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>复制文件到挂载点</p>
+</li>
+</ol>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp file /mnt/s3</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="2">
+<li>在华为云控制台检查bucket中是否存在该文件</li>
+</ol>
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><ol>
+<li><p>fuse: device not found, try ‘modprobe fuse’ first<br><a href="https://github.com/s3fs-fuse/s3fs-fuse/issues/1314#issuecomment-647482118" target="_blank" rel="noopener">k8s中，容器需要设置特权模式。否则会引起此报错</a></p>
+</li>
+<li><p>启用此功能需要节点安装fuse组件么<br>不需要，只需要容器安装<code>s3fs</code>，调用容器内的fuse组件。fuse是user-space的组件，只需要容器内安装。之后需要特权模式sys-admin。则能正常使用。<br><a href="https://zhuanlan.zhihu.com/p/106719192?utm_source=wechat_session" target="_blank" rel="noopener">用户空间文件系统FUSE工作原理</a></p>
+</li>
+<li><p>s3fs: credentials file /root/.passwd-s3fs should not have others permissions.<br>文件权限问题，为是s3认证信息保密，将权限由644改为600。<code>chmod 600 ～/.passwd-s3fs</code>。</p>
+</li>
+<li><p>文件只读性能还可以，但一点有写操作，性能很差。<br>a服务修改了文件，会重新上传文件至s3，其他节点则是从s3同步下修改的文件。</p>
+</li>
+</ol>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p><a href="https://github.com/s3fs-fuse" target="_blank" rel="noopener">s3fs-fuse github</a><br><a href="https://zhuanlan.zhihu.com/p/106719192?utm_source=wechat_session" target="_blank" rel="noopener">fuse 概念扫盲</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/11/13/persistence-2020-11-13-MongoDB-sharded%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%BB%B4%E6%8A%A4%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/13/persistence-2020-11-13-MongoDB-sharded%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%BB%B4%E6%8A%A4%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">MongoDB-sharded集群搭建及维护使用</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-11-13 04:02:02" itemprop="dateCreated datePublished" datetime="2020-11-13T04:02:02+08:00">2020-11-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Persistence/" itemprop="url" rel="index">
+                    <span itemprop="name">Persistence</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/11/13/persistence-2020-11-13-MongoDB-sharded%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%BB%B4%E6%8A%A4%E4%BD%BF%E7%94%A8/" class="post-meta-item leancloud_visitors" data-flag-title="MongoDB-sharded集群搭建及维护使用" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><p>mongodb的搭建主要分<code>sharded-cluster</code>,<code>ha</code>, <code>single-node</code>, 一个<code>ha</code>可以包含primary(1),secondary(0~2),ab</p>
+<ol>
+<li><p>mongodb使用偶数版本(稳定版本)。比如4.4.1， 而非奇数版本(开发版本)，比如4.3.0。具体详见<a href="https://docs.mongodb.com/manual/reference/versioning/#mongodb-versioning" target="_blank" rel="noopener">mongodb versioning</a></p>
+</li>
+<li><p>mongodb关于bitnami的sharded部署，普通用户的创建不能使用。因为</p>
+</li>
+</ol>
+<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h1 id="2-环境准备"><a href="#2-环境准备" class="headerlink" title="2.环境准备"></a>2.环境准备</h1><h1 id="3-部署"><a href="#3-部署" class="headerlink" title="3.部署"></a>3.部署</h1><h1 id="4-使用"><a href="#4-使用" class="headerlink" title="4.使用"></a>4.使用</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>官方文档</p>
+<p><a href="https://docs.mongodb.com/manual/sharding/" target="_blank" rel="noopener">mongodb官方文档-sharding</a></p>
+<p><a href="https://docs.mongodb.com/manual/tutorial/deploy-shard-cluster/" target="_blank" rel="noopener">mongodb官方文档-sharding部署</a></p>
+<p><a href="https://docs.mongodb.com/manual/administration/sharded-cluster-administration/" target="_blank" rel="noopener">mongodb官方文档-sharded-Cluster管理员文档</a></p>
+<p><a href="https://docs.mongodb.com/v3.0/administration/sharded-clusters/" target="_blank" rel="noopener">mongodb官方文档-sharded-Cluster管理员文档v3版本</a></p>
+<p><a href="https://docs.mongodb.com/manual/reference/versioning/#mongodb-versioning" target="_blank" rel="noopener">mongodb官方文档-版本说明</a></p>
+<p><a href="https://docs.mongodb.com/manual/release-notes/4.4/" target="_blank" rel="noopener">mongodb官方文档-Release Notes</a></p>
+<p>部署chart(注意，helm/charts下的mongodb和mongodb-replicaset已不再维护)</p>
+<p><a href="https://github.com/bitnami/charts/tree/master/bitnami/mongodb-sharded" target="_blank" rel="noopener">mongodb-部署chart-Mongodb-sharded</a></p>
+<p><a href="https://github.com/bitnami/charts/issues/1655#issuecomment-704064736" target="_blank" rel="noopener">数据库初始化，需要等集群正确分片后执行</a><br><a href="https://github.com/bitnami/charts/issues/1655" target="_blank" rel="noopener">(bitnami/mongodb-sharded)custom用户和数据库变量被忽略</a></p>
+<p>扫盲博客</p>
+<p><a href="https://www.cnblogs.com/xybaby/p/6832296.html#_label_0" target="_blank" rel="noopener">博客–mongodb部署了解mongodb-sharded</a></p>
+<p>其他<br><a href="https://help.aliyun.com/document_detail/64561.html" target="_blank" rel="noopener">阿里云mongodb-sharding 注意事项</a></p>
+<p><a href="https://www.mongodb.com/blog/post/performance-best-practices-sharding" target="_blank" rel="noopener">Performance Best Practices: Sharding</a></p>
+<p><a href="https://geekflare.com/mongodb-sharding-best-practices/" target="_blank" rel="noopener">What is MongoDB Sharding and the Best Practices?</a></p>
+<p><a href="https://orangematter.solarwinds.com/2017/09/06/the-basics-of-sharding-in-mongodb/" target="_blank" rel="noopener">The Basics of Sharding in MongoDB</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/11/12/golang-2020-11-12-Go-Struct-tag%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E4%B8%89-%E4%B8%BAstruct%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8Cvalidator/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/12/golang-2020-11-12-Go-Struct-tag%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E4%B8%89-%E4%B8%BAstruct%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8Cvalidator/" class="post-title-link" itemprop="url">Go-Struct-tag深入理解[三]为struct设置参数校验validator</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-11-12 03:38:14" itemprop="dateCreated datePublished" datetime="2020-11-12T03:38:14+08:00">2020-11-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Golang/" itemprop="url" rel="index">
+                    <span itemprop="name">Golang</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/11/12/golang-2020-11-12-Go-Struct-tag%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E4%B8%89-%E4%B8%BAstruct%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8Cvalidator/" class="post-meta-item leancloud_visitors" data-flag-title="Go-Struct-tag深入理解[三]为struct设置参数校验validator" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><h1 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h1><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1></body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/11/06/devops-2020-11-06-DevOps-trivy-%E9%95%9C%E5%83%8F%E6%89%AB%E6%8F%8F%E6%B1%87%E6%80%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/06/devops-2020-11-06-DevOps-trivy-%E9%95%9C%E5%83%8F%E6%89%AB%E6%8F%8F%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">DevOps-trivy-镜像扫描汇总</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-11-06 06:26:40" itemprop="dateCreated datePublished" datetime="2020-11-06T06:26:40+08:00">2020-11-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Devops/" itemprop="url" rel="index">
+                    <span itemprop="name">Devops</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/11/06/devops-2020-11-06-DevOps-trivy-%E9%95%9C%E5%83%8F%E6%89%AB%E6%8F%8F%E6%B1%87%E6%80%BB/" class="post-meta-item leancloud_visitors" data-flag-title="DevOps-trivy-镜像扫描汇总" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><p>trivy用来扫描镜像的安全漏洞。如果用于生产环境，需要将漏洞库离线，安全人员将镜像的基础镜像或者buildpack的stack进行升级。之后再升级安全漏洞。</p>
+<p>将安全漏洞修复变成可计划，分期实施的过程。如果一直使用在线库，则不能采取存在漏洞立即删除的策略。</p>
+<h1 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h1><p>trivy version 0.4.4</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>扫描镜像的命令</p>
+<h2 id="采用server-client模式启动服务"><a href="#采用server-client模式启动服务" class="headerlink" title="采用server-client模式启动服务"></a>采用<code>server-client</code>模式启动服务</h2><p>trivy采取<code>server-client</code>模式，server端将漏洞库离线打在镜像内</p>
+<h3 id="1-获取离线漏洞库"><a href="#1-获取离线漏洞库" class="headerlink" title="1. 获取离线漏洞库"></a>1. 获取离线漏洞库</h3><p>在trivy版本Release时，会发布漏洞库<br><a href="https://github.com/aquasecurity/trivy-db/releases" target="_blank" rel="noopener">下载连接</a><br><a href="https://github.com/aquasecurity/trivy/issues/423" target="_blank" rel="noopener">参考issue</a></p>
+<p>或者选择执行命令下载</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">trivy --download-db-only</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-启动server端"><a href="#2-启动server端" class="headerlink" title="2. 启动server端"></a>2. 启动server端</h3><p>server端命令如下</p>
+<blockquote>
+<p>–token用于客户端与server连接时，认证使用。<br>–skip-update 跳过漏洞库更新</p>
+</blockquote>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">trivy server -d --listen 0.0.0.0:4954 --skip-update --token mail2Uyu</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3-启动client端"><a href="#3-启动client端" class="headerlink" title="3. 启动client端"></a>3. 启动client端</h3><p>client端命令如下</p>
+<blockquote>
+<p>–cache-dir 声明缓存的路径<br>–severity  扫描的漏洞安全级别<br>–vuln-type 扫描的漏洞类型<br>–format    声明报告格式<br>–output    输出的日志位置<br>–ignore-unfixed 忽略未修复的漏洞</p>
+</blockquote>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">trivy client --remote http://10.15.6.105:32449 --token mail2Uyu \</span><br><span class="line">             --cache-dir /root/.cache/trivy \</span><br><span class="line">             --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL \</span><br><span class="line">             --vuln-type os \</span><br><span class="line">             --ignore-unfixed \</span><br><span class="line">             --format json \</span><br><span class="line">             --output /root/.cache/reports/scan_report_984890059.json \</span><br><span class="line">             ubuntu:20.04</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="使用-trivy-直接扫描"><a href="#使用-trivy-直接扫描" class="headerlink" title="使用 trivy 直接扫描"></a>使用 trivy 直接扫描</h2><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">trivy  --cache-dir /root/.cache/trivy \</span><br><span class="line">       --severity CRITICAL \</span><br><span class="line">       --vuln-type os \</span><br><span class="line">       --format json \</span><br><span class="line">       --output /root/.cache/reports/18.04.json \</span><br><span class="line">       centos:centos7.8.2003</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="trivy-跳过-误报漏洞"><a href="#trivy-跳过-误报漏洞" class="headerlink" title="trivy 跳过 误报漏洞"></a>trivy 跳过 误报漏洞</h2><p>在trivy命令执行的同级目录下， 创建<code>.trivyignore</code>文件。以类似下面内容配置忽略的漏洞</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ cat .trivyignore</span><br><span class="line"><span class="comment"># Accept the risk</span></span><br><span class="line">CVE-2018-14618</span><br><span class="line"></span><br><span class="line"><span class="comment"># No impact in our settings</span></span><br><span class="line">CVE-2019-1543</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/aquasecurity/trivy/issues/423" target="_blank" rel="noopener">获取trivy漏洞库</a><br><a href="https://github.com/aquasecurity/trivy#ignore-the-specified-vulnerabilities" target="_blank" rel="noopener">忽略特定的漏洞</a></p>
+<p><a href="https://github.com/aquasecurity/trivy#os-packages" target="_blank" rel="noopener">trivy支持的os</a></p>
+<p><a href="https://github.com/aquasecurity/trivy/issues/310" target="_blank" rel="noopener">bug-使用厂商(比如. Redhat)提供的危险等级</a><br><a href="https://github.com/aquasecurity/trivy/issues/403" target="_blank" rel="noopener">issue-不能使用非官方源装包(包括自制的包or国内源装包)</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/11/06/kubernetes-2020-11-06-Kubernetes-ingress-nginx%E9%85%8D%E7%BD%AEgrpc%E6%9C%8D%E5%8A%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/06/kubernetes-2020-11-06-Kubernetes-ingress-nginx%E9%85%8D%E7%BD%AEgrpc%E6%9C%8D%E5%8A%A1/" class="post-title-link" itemprop="url">Kubernetes-ingress-nginx配置grpc服务</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-11-06 06:17:38" itemprop="dateCreated datePublished" datetime="2020-11-06T06:17:38+08:00">2020-11-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Kubernetes/" itemprop="url" rel="index">
+                    <span itemprop="name">Kubernetes</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/11/06/kubernetes-2020-11-06-Kubernetes-ingress-nginx%E9%85%8D%E7%BD%AEgrpc%E6%9C%8D%E5%8A%A1/" class="post-meta-item leancloud_visitors" data-flag-title="Kubernetes-ingress-nginx配置grpc服务" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><p>ingress-nginx对于暴露grpc的服务，要求必须tls加密。所以，要么ingress配置grpcs,在服务端自己管理证书；要么ingress配置grpc,在ingress配置统一管理证书。</p>
+<p>为便于运维管理证书，此处采用<code>cert-manager</code>统一在ingress配置中。自动生成证书，发布https服务。</p>
+<h1 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h1><ul>
+<li><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1></li>
+</ul>
+<ol>
+<li>生成自签发CA证书，并保存在secret中(供cert-manager签发证书使用)；</li>
+<li>配置<code>cluster-issuer</code>,和<code>certificate</code>，使生成Secret，保存证书、ca和私钥；</li>
+<li>创建pod,service,ingress, ingress的tls配置使用第二步生成的Secret；</li>
+<li>执行命令测试grpc端口是否暴露成功；<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grpcurl -insecure test.icos.city:443 build.stack.fortune.FortuneTeller/Predict</span><br></pre></td></tr></tbody></table></figure>
+
+</li>
+</ol>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>以上1.2步参考cert-manager相关内容<br><a href="https://hex-py.github.io/2020/11/05/kubernetes-2020-11-05-Kubernetes-certmanager%E8%A7%A3%E5%86%B3ingress-tls%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98/">cert-manager hex-博客</a><br><a href="https://github.com/hex-py/cert-manager-example.git" target="_blank" rel="noopener">cert-manager hex-github-示例项目</a></p>
+<p>第3,4部参考<code>ingress-nginx</code>的官方示例，<br><a href="https://github.com/kubernetes/ingress-nginx/tree/master/images/grpc-fortune-teller" target="_blank" rel="noopener">IngressNginx官房GRPC示例</a></p>
+<p>第3,4部也可参考cert-manager的示例代码测试<br><a href="https://github.com/hex-py/cert-manager-example.git" target="_blank" rel="noopener">cert-manager hex-github-示例项目</a></p>
+<p>其他关于grpc的内容，需要参考此链接</p>
+<p><a href="https://github.com/grpc/grpc" target="_blank" rel="noopener">grpc_github</a> </p>
+<p><a href="https://grpc.io/docs/languages/go/quickstart/" target="_blank" rel="noopener">grpc_go_quick_start</a> </p>
+<p><a href="https://grpc.io/docs/languages/python/quickstart/" target="_blank" rel="noopener">grpc python quick-start</a> </p>
+<p><a href="https://github.com/grpc/grpc-java" target="_blank" rel="noopener">grpc_java_quick-start</a></p>
+<p><a href="https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/grpc" target="_blank" rel="noopener">ingress-nginx-grpcExample</a></p>
+<p><a href="https://kubernetes.github.io/ingress-nginx/examples/grpc/" target="_blank" rel="noopener">ingress-nginx-grpc-DOC</a></p>
+<p><a href="https://github.com/kubernetes/ingress-nginx/tree/master/images/grpc-fortune-teller" target="_blank" rel="noopener">ingress-nginx-grocExampleImage</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/11/05/kubernetes-2020-11-05-Kubernetes-certmanager%E8%A7%A3%E5%86%B3ingress-tls%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/05/kubernetes-2020-11-05-Kubernetes-certmanager%E8%A7%A3%E5%86%B3ingress-tls%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">Kubernetes-CertManager解决ingress-tls证书问题</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-11-05 03:55:15" itemprop="dateCreated datePublished" datetime="2020-11-05T03:55:15+08:00">2020-11-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Kubernetes/" itemprop="url" rel="index">
+                    <span itemprop="name">Kubernetes</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/11/05/kubernetes-2020-11-05-Kubernetes-certmanager%E8%A7%A3%E5%86%B3ingress-tls%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98/" class="post-meta-item leancloud_visitors" data-flag-title="Kubernetes-CertManager解决ingress-tls证书问题" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><p>由于需要配置<code>ingress-grpc</code>,nginx-ingress要求tls加密。实现的方式有两种：一种在ingress注解<code>grpcs</code>,之后在pod控制证书；另一种在ingress配置<code>tls</code>。<br>生产环境证书都是运维统一维护，舍弃第一种。所以调研cert-manager用来维护证书。</p>
+<p>此处<code>cert-manager</code>用来使用已给的<code>ca</code>为需要证书的服务生成证书、并使用.</p>
+<h1 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h1><p>K8S：1.15.6<br>CertManager: 1.0.4</p>
+<h1 id="部署cert-manager"><a href="#部署cert-manager" class="headerlink" title="部署cert-manager"></a>部署cert-manager</h1><p>两种方式：<br>一种资源清单部署（<a href="https://cert-manager.io/docs/installation/kubernetes/#installing-with-regular-manifests" target="_blank" rel="noopener">install with regular manifests</a>）<br>另一种是helm-chart部署（<a href="https://cert-manager.io/docs/installation/kubernetes/#installing-with-helm" target="_blank" rel="noopener">install with helm</a>）</p>
+<p>注意, 默认配置在<code>certificate</code>删除时,它所创建的<code>secret</code>不会被删除; 如果想要<code>Secret</code>同步被删除,需要在部署时指定参数<code>--enable-certificate-owner-ref=true</code>.</p>
+<h2 id="1-资源清单部署"><a href="#1-资源清单部署" class="headerlink" title="1. 资源清单部署"></a>1. 资源清单部署</h2><blockquote>
+<p>由于工作环境使用的k8s环境版本为1.15.6，&lt;1.16.</p>
+</blockquote>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Kubernetes &lt;1.16</span></span><br><span class="line">kubectl apply --validate=<span class="literal">false</span> -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager-legacy.yaml</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="2-helm-chart部署"><a href="#2-helm-chart部署" class="headerlink" title="2. helm-chart部署"></a>2. helm-chart部署</h2><ol>
+<li><p>创建CRD资源</p>
+<blockquote>
+<p>由于工作环境使用的k8s环境版本为1.15.6，创建crd时使用最新版本.</p>
+</blockquote>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply --validate=<span class="literal">false</span> -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>获取chart部署</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加 chart-repo</span></span><br><span class="line">helm repo add jetstack https://charts.jetstack.io</span><br><span class="line"><span class="comment"># 拉取 v1.0.4 版本chart</span></span><br><span class="line"><span class="comment"># 建议拉取chart,而不是在线安装</span></span><br><span class="line">helm pull jetstack/cert-manager --version=v1.0.4</span><br><span class="line"></span><br><span class="line"><span class="comment"># helm install </span></span><br><span class="line">helm install --name cert-manager --namespace cert-manager cert-manager-v1.0.4.tgz</span><br></pre></td></tr></tbody></table></figure>
+
+</li>
+</ol>
+<h1 id="检查安装"><a href="#检查安装" class="headerlink" title="检查安装"></a>检查安装</h1><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ kubectl get pods --namespace cert-manager</span><br><span class="line"></span><br><span class="line">NAME                                       READY   STATUS    RESTARTS   AGE</span><br><span class="line">cert-manager-5c6866597-zw7kh               1/1     Running   0          2m</span><br><span class="line">cert-manager-cainjector-577f6d9fd7-tr77l   1/1     Running   0          2m</span><br><span class="line">cert-manager-webhook-787858fcdb-nlzsq      1/1     Running   0          2m</span><br></pre></td></tr></tbody></table></figure>
+
+
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>证书的生成分这几种方式<br>SelfSigned:<br>CA:<br>Vault:</p>
+<p>此处选用<code>CA</code>方式签发证书：</p>
+<h2 id="1-创建ca并保存进集群，Secret-cert-manager-ca-key-pair"><a href="#1-创建ca并保存进集群，Secret-cert-manager-ca-key-pair" class="headerlink" title="1. 创建ca并保存进集群，Secret:cert-manager:ca-key-pair"></a>1. 创建ca并保存进集群，Secret:cert-manager:ca-key-pair</h2><blockquote>
+<p>此处配置的是自签发证书，如果环境中需要更换成合法证书，需要运维在第二步时，根据真实证书创建Secret。 </p>
+</blockquote>
+<ul>
+<li><p>生成自签发证书(ca.crt)和key(ca.key)</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Generate a CA private key</span></span><br><span class="line">openssl genrsa -out ca.key 2048</span><br><span class="line">    </span><br><span class="line"><span class="comment"># Create a self signed Certificate, valid for 10yrs with the 'signing' option set</span></span><br><span class="line">openssl req -x509 -new -nodes -key ca.key -subj <span class="string">"/CN=ICOS.CITY"</span> -days 3650 -reqexts v3_req -extensions v3_ca -out ca.crt</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>创建<code>Secret</code>保存证书(命名空间: cert-manager; 资源类型: secret; 资源名称: ca-key-pair.)。</p>
+<blockquote>
+<p>如果使用cluster-issuer，则需要将此secret保存至<code>cert-manager</code>命名空间；<br>如果使用issuer,则需要在每个issuer所在命名空间创建此secret.</p>
+</blockquote>
+</li>
+</ul>
+<p>此处以 <code>cluster-issuer</code> 配置</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl create secret tls ca-key-pair --cert=ca.crt --key=ca.key --namespace=cert-manager</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="2-创建-cluster-issuer-内容如下-cluster-issuer-yaml-："><a href="#2-创建-cluster-issuer-内容如下-cluster-issuer-yaml-：" class="headerlink" title="2. 创建 cluster-issuer, 内容如下(cluster-issuer.yaml)："></a>2. 创建 <code>cluster-issuer</code>, 内容如下(cluster-issuer.yaml)：</h2><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">cert-manager.io/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ClusterIssuer</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">ca-clusterissuer</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">ca:</span></span><br><span class="line">    <span class="attr">secretName:</span> <span class="string">ca-key-pair</span></span><br></pre></td></tr></tbody></table></figure>
+<p>执行下面命令创建</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl create -f cluster-issuer.yaml</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="3-创建certificate测试，内容如下-example-ca-yaml-："><a href="#3-创建certificate测试，内容如下-example-ca-yaml-：" class="headerlink" title="3. 创建certificate测试，内容如下(example-ca.yaml)："></a>3. 创建<code>certificate</code>测试，内容如下(example-ca.yaml)：</h2><figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">cert-manager.io/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Certificate</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">example-ca</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">mars</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="comment"># 创建名为`example-secret`的secret,保存`ca`与签发的证书.</span></span><br><span class="line">  <span class="attr">secretName:</span> <span class="string">example-secret</span></span><br><span class="line">  <span class="attr">issuerRef:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">ca-clusterissuer</span></span><br><span class="line">    <span class="attr">kind:</span> <span class="string">ClusterIssuer</span></span><br><span class="line">  <span class="comment"># 此处放的是服务集群内部访问地址，</span></span><br><span class="line">  <span class="attr">commonName:</span> <span class="string">example.mars</span></span><br><span class="line">  <span class="attr">organization:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Example</span> <span class="string">CA</span></span><br><span class="line">  <span class="attr">dnsNames:</span></span><br><span class="line">  <span class="comment"># 同namespace访问的服务地址</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">example</span></span><br><span class="line">  <span class="comment"># 集群外部访问地址</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">example.mars.icos.city</span></span><br></pre></td></tr></tbody></table></figure>
+<p>执行命令<code>kubectl create -f example-ca.yaml</code><br>查看证书和Secret</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">$ kubectl -n mars get certificate</span><br><span class="line"><span class="comment"># 证书的状态 READY 为 True。</span></span><br><span class="line">NAME           READY   SECRET             AGE</span><br><span class="line">example-ca     True    example-secret     5d20h</span><br><span class="line"></span><br><span class="line">$ kubectl -n mars get secrets example-secret -o yaml</span><br><span class="line"><span class="comment"># 回显的secret的 data.ca.crt, data.tls.crt, data.tls.key 都有证书或秘钥base64值。</span></span><br><span class="line">apiVersion: v1</span><br><span class="line">data:</span><br><span class="line">  ca.crt: LS0tLS1C...EUtLS0tLQo=</span><br><span class="line">  tls.crt: LS0tLS1C...RFLS0tLS0K</span><br><span class="line">  tls.key: LS0tLS1C...0tLS0tCg==</span><br><span class="line">kind: Secret</span><br><span class="line">metadata:</span><br><span class="line">  annotations:</span><br><span class="line">    cert-manager.io/alt-names: <span class="built_in">test</span>-cert.mars,<span class="built_in">test</span>-cert.icos.city</span><br><span class="line">    cert-manager.io/certificate-name: <span class="built_in">test</span>-cert-ca</span><br><span class="line">    cert-manager.io/common-name: icos.city</span><br><span class="line">    cert-manager.io/issuer-kind: ClusterIssuer</span><br><span class="line">    cert-manager.io/issuer-name: ca-clusterissuer</span><br><span class="line">  <span class="comment"># 在certificate中指定的 `spec.secretName`</span></span><br><span class="line">  name: example-secret</span><br><span class="line">  namespace: mars</span><br><span class="line"><span class="built_in">type</span>: kubernetes.io/tls</span><br><span class="line">``` </span><br><span class="line"><span class="comment">## 4. 容器使用</span></span><br><span class="line">集群中使用证书的场景有以下几个诉求：</span><br><span class="line">1. 非https容器访问https容器，需要信任此自签证书。所以需要将`ca.crt`挂载到非https容器内部；</span><br><span class="line">2. 储存各个服务自身证书的secret中包含三部分，`ca.crt`,`tls.crt`,`tls.key`。</span><br><span class="line">3. 统一的平台部署应用到多个k8s集群，需要每个集群均部署`cert-manager`,并使用同一个`ca`。</span><br><span class="line"></span><br><span class="line">所以采取以下实现。</span><br><span class="line">1. 为每个服务均生成证书，至少包含`同一集群内部访问`和`同一Namespace访问`的证书。并挂载在`/opt/tls/`目录下。</span><br><span class="line">2. 如果服务有对外暴露，多加一个dnsName 为`集群外部访问地址`。</span><br><span class="line">3. 每个服务在固定的容器目录下，均有`ca.crt`,`tls.crt`,`tls.key`文件，只是访问https服务，则只使用`ca.crt`文件。</span><br><span class="line">4. `ca.crt`是公用、一致的； `tls.crt`,`tls.key`是根据每个服务的服务名、ingress签发的。</span><br><span class="line"></span><br><span class="line">```yaml</span><br><span class="line"><span class="comment"># Source: icossense-icosgrpc-service-xadit-001/templates/deployment.yaml</span></span><br><span class="line">apiVersion: apps/v1</span><br><span class="line">kind: Deployment</span><br><span class="line">metadata:</span><br><span class="line">  name: example-001</span><br><span class="line">  labels:</span><br><span class="line">    app: example-001</span><br><span class="line">    chart: example-001-1.0.0</span><br><span class="line">    release: <span class="string">"RELEASE-NAME"</span></span><br><span class="line">    heritage: <span class="string">"Helm"</span></span><br><span class="line">spec:</span><br><span class="line">  selector:</span><br><span class="line">    matchLabels:</span><br><span class="line">      app: example-001</span><br><span class="line">  replicas: 1</span><br><span class="line">  template:</span><br><span class="line">    metadata:</span><br><span class="line">      name: example-001</span><br><span class="line">      labels:</span><br><span class="line">        app: example-001</span><br><span class="line">        release: <span class="string">"RELEASE-NAME"</span></span><br><span class="line">    spec:</span><br><span class="line">      containers:</span><br><span class="line">      - name: example-001</span><br><span class="line">        image: <span class="string">"hexpy/example-grpc:latest9"</span></span><br><span class="line">        imagePullPolicy: <span class="string">"Always"</span></span><br><span class="line">        securityContext:</span><br><span class="line">          allowPrivilegeEscalation: <span class="literal">true</span></span><br><span class="line">          runAsNonRoot: <span class="literal">true</span></span><br><span class="line">          capabilities:</span><br><span class="line">            drop: [<span class="string">"NET_ADMIN"</span>, <span class="string">"SYS_TIME"</span>,<span class="string">"CHOWN"</span>,<span class="string">"SYS_ADMIN"</span>]</span><br><span class="line">        ports:</span><br><span class="line">        - name: containerport-0</span><br><span class="line">          protocol: <span class="string">"TCP"</span></span><br><span class="line">          containerPort: 7070</span><br><span class="line">        volumeMounts:</span><br><span class="line">        - name: example-secret-mount</span><br><span class="line">          mountPath: <span class="string">"/etc/tls"</span></span><br><span class="line">          readOnly: <span class="literal">true</span></span><br><span class="line">      volumes:</span><br><span class="line">      <span class="comment"># 在此`deployment`中, `volumeMounts`中的`name`一致</span></span><br><span class="line">      - name: example-secret-mount</span><br><span class="line">        secret:</span><br><span class="line">          <span class="comment"># 在`certificate`中`spec.secretName`设置的.</span></span><br><span class="line">          secretName: example-secret</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://cert-manager.io/docs/" target="_blank" rel="noopener">官方文档</a><br><a href="https://artifacthub.io/packages/helm/jetstack/cert-manager/1.0.4" target="_blank" rel="noopener">chart</a><br><a href="https://github.com/jetstack/cert-manager" target="_blank" rel="noopener">github</a><br><a href="https://github.com/jetstack/cert-manager/issues/2993" target="_blank" rel="noopener">当证书被删除，Secret会被留下</a><br><a href="https://github.com/jetstack/cert-manager/issues/296" target="_blank" rel="noopener">当证书被删除，Secret会被留下2</a></p>
+<p><a href="https://github.com/hex-py/cert-manager-example.git" target="_blank" rel="noopener">github-示例项目</a><br><a href="https://atelierhsn.com/2020/07/cert-manager-ingress/" target="_blank" rel="noopener">Automatic TLS certificates with cert-manager and ingress-nginx</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/10/22/golang-2020-10-22-Go-Struct-tag%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E4%BA%8C-%E4%B8%BAstruct%E8%AE%BE%E7%BD%AEdefault%E5%80%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/22/golang-2020-10-22-Go-Struct-tag%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E4%BA%8C-%E4%B8%BAstruct%E8%AE%BE%E7%BD%AEdefault%E5%80%BC/" class="post-title-link" itemprop="url">Go-Struct-tag深入理解[二]为struct设置default值</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-10-22 07:19:13" itemprop="dateCreated datePublished" datetime="2020-10-22T07:19:13+08:00">2020-10-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Golang/" itemprop="url" rel="index">
+                    <span itemprop="name">Golang</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/10/22/golang-2020-10-22-Go-Struct-tag%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E4%BA%8C-%E4%B8%BAstruct%E8%AE%BE%E7%BD%AEdefault%E5%80%BC/" class="post-meta-item leancloud_visitors" data-flag-title="Go-Struct-tag深入理解[二]为struct设置default值" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><h1 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h1><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://web.archive.org/web/20160818125551/https://joneisen.tumblr.com/post/53695478114/golang-and-default-values" target="_blank" rel="noopener">golang 为struct设置默认值的四种方式</a><br><a href="https://stackoverflow.com/questions/37135193/how-to-set-default-values-in-go-structs" target="_blank" rel="noopener">how-to-set-default-values-in-go-structs(stack overflow)</a></p>
+<p><a href="https://github.com/creasty/defaults#usage" target="_blank" rel="noopener">为struct设置默认值的包</a><br><a href="https://github.com/go-playground/validator/issues/263" target="_blank" rel="noopener">validator包不支持也不打算支持default</a><br><a href="https://github.com/leebenson/conform" target="_blank" rel="noopener">struct 数据预处理包</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/10/21/golang-2020-10-21-Go-Struct-tag%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E4%B8%80-StructTag%E8%A7%84%E5%88%99%E8%AF%B4%E6%98%8E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/21/golang-2020-10-21-Go-Struct-tag%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E4%B8%80-StructTag%E8%A7%84%E5%88%99%E8%AF%B4%E6%98%8E/" class="post-title-link" itemprop="url">Go-Struct-tag深入理解[一]StructTag规则说明</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-10-21 09:07:42" itemprop="dateCreated datePublished" datetime="2020-10-21T09:07:42+08:00">2020-10-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Golang/" itemprop="url" rel="index">
+                    <span itemprop="name">Golang</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/10/21/golang-2020-10-21-Go-Struct-tag%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E4%B8%80-StructTag%E8%A7%84%E5%88%99%E8%AF%B4%E6%98%8E/" class="post-meta-item leancloud_visitors" data-flag-title="Go-Struct-tag深入理解[一]StructTag规则说明" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Go 语言中<code>Struct</code>声明包含三部分: <code>field_name</code>, <code>field_type</code>, <code>field_tag</code>.</p>
+<p><code>field_tag</code>的作用:</p>
+<ul>
+<li><p>可以作为字段后额外的注释或者说明</p>
+</li>
+<li><p>在反射场景下, <code>reflect</code>包中提供了操作<code>tag</code>的方法, <code>tag</code>的写法需要遵循一定规则.</p>
+</li>
+</ul>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h3 id="Tag-书写规则"><a href="#Tag-书写规则" class="headerlink" title="Tag 书写规则"></a>Tag 书写规则</h3><p><code>tag</code>是一串字符串, 以空格分隔的<code>key:"value"</code>对.</p>
+<ul>
+<li><code>key</code>: 为非空字符串, 字符串不含控制字符\空格\引号\冒号.</li>
+<li><code>value</code>: 以双引号标记的字符串.</li>
+<li>以<code>:</code>分隔,并且冒号前后不能有空格.</li>
+</ul>
+<figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Server <span class="keyword">struct</span> {</span><br><span class="line">    ServerName <span class="keyword">string</span> <span class="string">`json: "server_name" gorm:"serverName" default:"example"`</span></span><br><span class="line">    ServerIP   <span class="keyword">string</span> <span class="string">`json: "server_ip"`</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="reflect获取Tag值"><a href="#reflect获取Tag值" class="headerlink" title="reflect获取Tag值"></a>reflect获取Tag值</h3><p><code>StructTag</code>提供了<code>Get(key string) string</code>方法来获取<code>Tag</code>，示例如下：</p>
+<figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"reflect"</span></span><br><span class="line">    <span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Server <span class="keyword">struct</span> {</span><br><span class="line">    ServerName <span class="keyword">string</span> <span class="string">`json: "server_name" gorm:"serverName" default:"example"`</span></span><br><span class="line">    ServerIP   <span class="keyword">string</span> <span class="string">`json: "server_ip"`</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    s := Server{}</span><br><span class="line">    st := reflect.TypeOf(s)</span><br><span class="line"></span><br><span class="line">    fieldServerName := st.Field(<span class="number">0</span>)</span><br><span class="line">    fmt.Printf(<span class="string">"TAG-key=&gt;json     TAG-value=&gt;%v\n"</span>, fieldServerName.Tag.Get(<span class="string">"json"</span>))</span><br><span class="line">    fmt.Printf(<span class="string">"TAG-key=&gt;default  TAG-value=&gt;%v\n"</span>, fieldServerName.Tag.Get(<span class="string">"default"</span>))</span><br><span class="line"></span><br><span class="line">    fieldServerIp := st.Field(<span class="number">1</span>)</span><br><span class="line">    fmt.Printf(<span class="string">"TAG-key=&gt;json     TAG-value=&gt;%v\n"</span>, fieldServerIp.Tag.Get(<span class="string">"json"</span>))</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>程序输出如下：</p>
+<figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TAG-key=&gt;json     TAG-value=&gt;server_name</span><br><span class="line">TAG-key=&gt;<span class="keyword">default</span>  TAG-value=&gt;example</span><br><span class="line">TAG-key=&gt;json     TAG-value=&gt;server_ip</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h3 id="Tag的作用"><a href="#Tag的作用" class="headerlink" title="Tag的作用"></a>Tag的作用</h3><p>使用反射可以动态的给结构体成员赋值，正是因为有tag，在赋值前可以使用tag来决定赋值的动作。 比如，官方的<code>encoding/json</code>包，可以将一个JSON数据<code>Unmarshal</code>进一个结构体，此过程中就使用了Tag. 该包定义一些规则，只要参考该规则设置tag就可以将不同的JSON数据转换成结构体。</p>
+<p>总之：正是基于struct的tag特性，才有了诸如json数据解析、orm映射等等的应用。理解这个关系是至关重要的。或许，你可以定义另一种tag规则，来处理你特有的数据。</p>
+<h3 id="Tag使用举例"><a href="#Tag使用举例" class="headerlink" title="Tag使用举例"></a>Tag使用举例</h3><table>
+<thead>
+<tr>
+<th>包</th>
+<th>包中关于tag的规则</th>
+<th>full example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>json</td>
+<td><a href="https://godoc.org/encoding/json#Marshal" target="_blank" rel="noopener">https://godoc.org/encoding/json#Marshal</a></td>
+<td>“my_name,omitempty” 声明名字+可省略<br>“,omitempty” 值为空则省略此字段<br>“my_name”  在json中此字段的键<br>“-“  字段始终省略</td>
+</tr>
+<tr>
+<td>default</td>
+<td><a href="https://github.com/creasty/defaults#usage" target="_blank" rel="noopener">https://github.com/creasty/defaults#usage</a></td>
+<td></td>
+</tr>
+<tr>
+<td>gorm</td>
+<td><a href="https://godoc.org/github.com/jinzhu/gorm" target="_blank" rel="noopener">https://godoc.org/github.com/jinzhu/gorm</a></td>
+<td><a href="https://www.cnblogs.com/zisefeizhu/p/12788017.html#%E7%BB%93%E6%9E%84%E4%BD%93%E6%A0%87%E8%AE%B0tags" target="_blank" rel="noopener">https://www.cnblogs.com/zisefeizhu/p/12788017.html#%E7%BB%93%E6%9E%84%E4%BD%93%E6%A0%87%E8%AE%B0tags</a></td>
+</tr>
+<tr>
+<td>yaml</td>
+<td><a href="https://godoc.org/gopkg.in/yaml.v2" target="_blank" rel="noopener">https://godoc.org/gopkg.in/yaml.v2</a></td>
+<td></td>
+</tr>
+<tr>
+<td>xml</td>
+<td><a href="https://godoc.org/encoding/xml" target="_blank" rel="noopener">https://godoc.org/encoding/xml</a></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://my.oschina.net/renhc/blog/2045683" target="_blank" rel="noopener">Go struct tag深入理解(华为)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/32279896" target="_blank" rel="noopener">Go语言中的struct tag(知乎)</a></p>
+<p><a href="https://github.com/golang/go/wiki/Well-known-struct-tags" target="_blank" rel="noopener">Well known struct tags(golang wiki)</a></p>
+<p><a href="https://www.cnblogs.com/zisefeizhu/p/12788017.html#%E7%BB%93%E6%9E%84%E4%BD%93%E6%A0%87%E8%AE%B0tags" target="_blank" rel="noopener">gorm 结构体的相关标记</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hex"
+      src="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+  <p class="site-author-name" itemprop="name">Hex</p>
+  <div class="site-description" itemprop="description">个人技术博客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">专栏</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hex-py" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hex-py" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hex</span>
+</div>
+
+        
+
+
+
+
+
+
+  <script pjax>
+  function leancloudSelector(url) {
+    return document.getElementById(url).querySelector('.leancloud-visitors-count');
+  }
+  if (CONFIG.page.isPost) {
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = visitors.getAttribute('id').trim();
+      var title = visitors.getAttribute('data-flag-title').trim();
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .then(response => response.json())
+              .then(() => {
+                leancloudSelector(url).innerText = counter.time + 1;
+              })
+              .catch(error => {
+                console.log('Failed to save visitor count', error);
+              })
+          } else {
+              Counter('post', '/classes/Counter', { title: title, url: url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.log('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  } else {
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return element.getAttribute('id').trim();
+      });
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length === 0) {
+            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
+              element.innerText = 0;
+            });
+            return;
+          }
+          for (let item of results) {
+            let { url, time } = item;
+            leancloudSelector(url).innerText = time;
+          }
+          for (let url of entries) {
+            var element = leancloudSelector(url);
+            if (element.innerText == '') {
+              element.innerText = 0;
+            }
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  }
+
+  fetch('https://app-router.leancloud.cn/2/route?appId=9XJtXrvzukg47QyRRTh3Rp1s-gzGzoHsz')
+    .then(response => response.json())
+    .then(({ api_server }) => {
+      var Counter = (method, url, data) => {
+        return fetch(`https://${api_server}/1.1${url}`, {
+          method: method,
+          headers: {
+            'X-LC-Id': '9XJtXrvzukg47QyRRTh3Rp1s-gzGzoHsz',
+            'X-LC-Key': 'yp4oGRDoJHNogXykGNIWlvCo',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.getAttribute('pjax') !== null) {
+      element.setAttribute('pjax', '');
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+
+  
+
+  
+
+  
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script>
+
+    </div>
+</body>
+</html>

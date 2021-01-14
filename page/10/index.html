@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic|Long Cang:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://hex-py.github.io').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: true,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="个人技术博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hex Blog">
+<meta property="og:url" content="https://hex-py.github.io/page/10/index.html">
+<meta property="og:site_name" content="Hex Blog">
+<meta property="og:description" content="个人技术博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Hex">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://hex-py.github.io/page/10/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Hex Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154554671-1"></script>
+    <script pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-154554671-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hex Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle"> 大胆假设 小心求证 认真做事 严谨做人 </p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>博客首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>文章归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类专栏</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>各种标签</a>
+
+  </li>
+        
+            
+  <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-location-arrow"></i>关于更多</a>
+
+  </li>
+
+
+      
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>站点搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2019/12/13/kubernetes-20191213-k8s%E5%B0%8F%E6%8A%80%E5%B7%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/13/kubernetes-20191213-k8s%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">kubectl 小技巧</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2019-12-13 08:49:00" itemprop="dateCreated datePublished" datetime="2019-12-13T08:49:00+08:00">2019-12-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Kubernetes/" itemprop="url" rel="index">
+                    <span itemprop="name">Kubernetes</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2019/12/13/kubernetes-20191213-k8s%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-meta-item leancloud_visitors" data-flag-title="kubectl 小技巧" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="简化命令行交互-简化应用程序部署语法"><a href="#简化命令行交互-简化应用程序部署语法" class="headerlink" title="简化命令行交互, 简化应用程序部署语法"></a>简化命令行交互, 简化应用程序部署语法</h1><h2 id="1-Kubectl-自动补全"><a href="#1-Kubectl-自动补全" class="headerlink" title="1. Kubectl 自动补全"></a>1. Kubectl 自动补全</h2><p>kubectl 工具本身支持自动补全,只需要简单设置一下即可</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"source &lt;(kubectl completion bash)"</span> &gt;&gt; ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></tbody></table></figure>
+<p>如果没有安装<code>bash-completion</code>, 按如下命令安装</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install bash-completion</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="2-自定义-kubectl-get-输出"><a href="#2-自定义-kubectl-get-输出" class="headerlink" title="2. 自定义 kubectl get 输出"></a>2. 自定义 kubectl get 输出</h2><p>kubectl get 相关资源，默认输出为 kubectl 内置，一般我们也可以使用<code>-o json</code>/<code>-o jsonpath=''</code>或者<code>-o yaml</code>查看其完整的资源信息。但是很多时候，我们需要关心的信息并不全面，因此我们需要自定义输出的列，那么可以使用 go-template 来进行实现。</p>
+<p>go-template 是 golang 的一种模板，可以参考 <a href="https://link.zhihu.com/?target=https%3A//golang.org/pkg/text/template/">template</a> 的相关说明。</p>
+<p>比如仅仅想要查看获取的 pods 中的各个 pod 的 uid，则可以使用以下命令：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods --all-namespaces -o go-template=<span class="string">'{{range .items}}{{.metadata.uid}} {{end}}'</span></span><br></pre></td></tr></tbody></table></figure>
+<p>比如使用 jsonpath 获取数据</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> ISTIO_PILOT_PORT=$(kubectl get -n istio-system service istio-ingressgateway -o jsonpath=<span class="string">'{.spec.ports[?(@.name=="tcp-pilot-grpc-tls")].nodePort}'</span>)</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">${ISTIO_PILOT_PORT}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="3-k8s强制删除提示-Terminating-的namespace"><a href="#3-k8s强制删除提示-Terminating-的namespace" class="headerlink" title="3. k8s强制删除提示 Terminating 的namespace"></a>3. k8s强制删除提示 <code>Terminating</code> 的<code>namespace</code></h2><h3 id="a-首先尝试强制删除参数"><a href="#a-首先尝试强制删除参数" class="headerlink" title="a. 首先尝试强制删除参数"></a>a. 首先尝试强制删除参数</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl delete namespace example-ns -force --grace-period=0</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="b-如果不能删除，则采取以下方法"><a href="#b-如果不能删除，则采取以下方法" class="headerlink" title="b. 如果不能删除，则采取以下方法"></a>b. 如果不能删除，则采取以下方法</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl edit namespace example-ns</span><br></pre></td></tr></tbody></table></figure>
+
+<p>将其中<code>spec.finalizers</code>的值删除，也可以设置为[]。保存退出后，namespace就会被删除。</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Namespace</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">finalizers:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">controller.cattle.io/namespace-auth</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mars</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">finalizers:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">kubernetes</span></span><br><span class="line"><span class="attr">status:</span></span><br><span class="line">  <span class="attr">phase:</span> <span class="string">Active</span></span><br></pre></td></tr></tbody></table></figure>
+<p>思路：<br>命名空间无法删除通常是因为还有资源在使用这个命名空间，执行<code>kubectl delete namespace xxx</code>时候，虽然显示deleted，但是命令夯死。我们可以查看资源使用情况：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl api-resources --namespaced=<span class="literal">true</span> -o name | xargs -n 1 kubectl get --show-kind --ingore-not-found -n xxxx</span><br></pre></td></tr></tbody></table></figure>
+
+
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://mp.weixin.qq.com/s/G8t18WpE_XW69nRmFLZSfg" target="_blank" rel="noopener">Kubernetes 的奇技淫巧</a><br><a href="https://blog.csdn.net/weixin_44267608/article/details/103002124" target="_blank" rel="noopener">删除一直处于terminating状态的namespace</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2019/12/13/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2019-12-13-Ansible-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/13/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2019-12-13-Ansible-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" class="post-title-link" itemprop="url">简记 Ansible 使用</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2019-12-13 08:49:00" itemprop="dateCreated datePublished" datetime="2019-12-13T08:49:00+08:00">2019-12-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">个人工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2019/12/13/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2019-12-13-Ansible-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" class="post-meta-item leancloud_visitors" data-flag-title="简记 Ansible 使用" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="1-ubuntu-18-04-install-Ansible"><a href="#1-ubuntu-18-04-install-Ansible" class="headerlink" title="1. ubuntu 18.04 install Ansible"></a>1. ubuntu 18.04 install Ansible</h1><p><code>software-properties-common</code> package installed. This software will make it easier to manage this and other independent software repositories:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install software-properties-common</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Then add the Ansible PPA by typing the following command:</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-add-repository ppa:ansible/ansible</span><br></pre></td></tr></tbody></table></figure>
+
+<p>install Ansible</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install ansible</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="2-config-ssh-access-to-ansible-hosts"><a href="#2-config-ssh-access-to-ansible-hosts" class="headerlink" title="2. config ssh access to ansible-hosts"></a>2. config ssh access to ansible-hosts</h1><h1 id="3-ansible-注意"><a href="#3-ansible-注意" class="headerlink" title="3. ansible 注意"></a>3. ansible 注意</h1><ol>
+<li>ansible 主机需要安装 pip install netaddr，因为 playbook 依赖</li>
+<li>ansible 主机需要安装 apt install sshpass ，因为使用密码连接</li>
+<li>ansible 主机需要安装 apt install zip unzip 因为 playbook 需要解压文件</li>
+<li>ansible 主机需要配置 ansible 的<code>host_key_checking</code>(/etc/ansible/ansible.cfg)为<code>False</code>，因为所有主机都是第一次连接，还没有主机指纹在<code>known_hosts</code>中，需要忽略</li>
+</ol>
+<h1 id="4-测试Ansible-Hosts连通性方法"><a href="#4-测试Ansible-Hosts连通性方法" class="headerlink" title="4. 测试Ansible-Hosts连通性方法"></a>4. 测试Ansible-Hosts连通性方法</h1><ol>
+<li><code>vi /etc/ansible/hosts</code>追加以下内容，IP地址即为要测试的机器<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[test]</span></span><br><span class="line">10.8.2.95 ansible_ssh_user=root ansible_ssh_pass=Qloud@123 docker_registry=true</span><br></pre></td></tr></tbody></table></figure></li>
+<li>执行以下命令，用<code>ping</code>模块进行测试。<code>test</code>为上面为hosts配置的主机组名字。<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible -i /etc/ansible/hosts <span class="built_in">test</span> -m ping</span><br></pre></td></tr></tbody></table></figure>
+
+</li>
+</ol>
+<h1 id="5-Ansible-的一些约定"><a href="#5-Ansible-的一些约定" class="headerlink" title="5. Ansible 的一些约定"></a>5. Ansible 的一些约定</h1><ol>
+<li><p>inventory 主机清单<br> <code>-i</code>参数指定主机清单。例如<code>ansible-playbook -i inventory.py nomad.yaml</code></p>
+<p>1.1 静态inventory，通过静态配置文件<code>inventory.json</code>配置。</p>
+<p>1.2 动态inventory，通过动态生成脚本<code>inventory.py</code>生成。</p>
+</li>
+<li><p>roles目录必须与playbook文件同级，并且文件夹名必须为<code>roles</code>。playbook文件中通过<code>roles</code>下的各个文件夹名字引用role<br> 例如 </p>
+ <figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">install</span> <span class="string">mirrors</span> <span class="string">and</span> <span class="string">initialization</span>         </span><br><span class="line">  <span class="attr">hosts:</span> <span class="string">all</span>                                       </span><br><span class="line">  <span class="attr">roles:</span>                                           <span class="comment"># roles/</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">yum-mirrors</span>                                  <span class="comment">#   |-- yum-mirrors/</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">initialization</span>                               <span class="comment">#   |-- initializations/</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">docker-registry</span>                              <span class="comment">#   |-- docker-registry/</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>单个role目录结构说明。</p>
+ <figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">.</span></span><br><span class="line"><span class="string">├──</span> <span class="string">install_nginx.yml</span>              <span class="comment"># playbook 文件和 roles 目录应该处于平级目录</span></span><br><span class="line"><span class="string">└──</span> <span class="string">roles</span>                          <span class="comment"># 存放所有角色的的目录</span></span><br><span class="line">    <span class="string">└──</span> <span class="string">nginx</span>                      <span class="comment"># nginx 角色</span></span><br><span class="line">    <span class="string">│</span>   <span class="string">├──</span> <span class="string">defaults</span>               <span class="comment"># 设定默认变量</span></span><br><span class="line">    <span class="string">│</span>   <span class="string">│</span>   <span class="string">└──</span> <span class="string">main.yml</span></span><br><span class="line">    <span class="string">│</span>   <span class="string">├──</span> <span class="string">files</span>                  <span class="comment"># 存放由 copy 或 script 模块等调用的文件</span></span><br><span class="line">    <span class="string">│</span>   <span class="string">│</span>   <span class="string">└──</span> <span class="string">index.html</span></span><br><span class="line">    <span class="string">│</span>   <span class="string">├──</span> <span class="string">handlers</span>               <span class="comment"># 触发器任务</span></span><br><span class="line">    <span class="string">│</span>   <span class="string">│</span>   <span class="string">└──</span> <span class="string">main.yml</span></span><br><span class="line">    <span class="string">│</span>   <span class="string">├──</span> <span class="string">meta</span>                   <span class="comment"># 定义当前角色的特殊设定及其依赖关系</span></span><br><span class="line">    <span class="string">│</span>   <span class="string">├──</span> <span class="string">tasks</span>                  <span class="comment"># 定义任务，它是 role 的基本元素</span></span><br><span class="line">    <span class="string">│</span>   <span class="string">│</span>   <span class="string">└──</span> <span class="string">main.yml</span></span><br><span class="line">    <span class="string">│</span>   <span class="string">├──</span> <span class="string">templates</span>              <span class="comment"># templates 模块查找所需要模板文件的目录</span></span><br><span class="line">    <span class="string">│</span>   <span class="string">│</span>   <span class="string">└──</span> <span class="string">nginx.conf.j2</span></span><br><span class="line">    <span class="string">│</span>   <span class="string">└──</span> <span class="string">vars</span>                   <span class="comment"># 定义变量</span></span><br><span class="line">    <span class="string">│</span>       <span class="string">└──</span> <span class="string">main.yml</span></span><br><span class="line">    <span class="string">└──</span> <span class="string">php</span>                        <span class="comment"># php 角色</span></span><br><span class="line">        <span class="string">└──</span> <span class="string">...</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>playbook文件的定义中，优先级: <code>role</code> &gt; <code>task</code>; 如果<code>task-A</code>必须要在某<code>role-B</code>之前执行，需要将<code>task-A</code>封装为<code>role-A</code>，放到<code>role-B</code>之前。</p>
+</li>
+<li><p><code>task</code>中常用的模块</p>
+<table>
+<thead>
+<tr>
+<th>模块名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ping</td>
+<td>检查指定节点机器是否还能连通</td>
+</tr>
+<tr>
+<td>command</td>
+<td>执行命令模块，可以不填，是ansible默认的模块，命令中无法使用变量，管道。</td>
+</tr>
+<tr>
+<td>shell</td>
+<td>启动一个子shell执行命令，执行的命令中有管道或者变量，就需要使用shell模块。</td>
+</tr>
+<tr>
+<td>script</td>
+<td>将本机的shell脚本在被管理主机运行</td>
+</tr>
+<tr>
+<td>copy</td>
+<td>将本机复制文件到远程位置</td>
+</tr>
+<tr>
+<td>service</td>
+<td>用于控制远程主机的服务</td>
+</tr>
+<tr>
+<td>cron</td>
+<td>用于管理定时任务</td>
+</tr>
+<tr>
+<td>file</td>
+<td>用于远程主机上的文件操作</td>
+</tr>
+<tr>
+<td>yum</td>
+<td>使用yum包管理器来管理软件包</td>
+</tr>
+<tr>
+<td>user、group</td>
+<td>user、goup分别请求：useradd、userdel、usermod；groupadd、groupdel、groupmod</td>
+</tr>
+<tr>
+<td>filesystem</td>
+<td>在块设备上创建文件系统</td>
+</tr>
+<tr>
+<td>get_url</td>
+<td>下载文件</td>
+</tr>
+<tr>
+<td>synchronize</td>
+<td>同步文件模块</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-18-04" target="_blank" rel="noopener">Install Ansible on Ubuntu 18.04</a></p>
+<p><a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html" target="_blank" rel="noopener">官方文档</a><br><a href="https://ansible-tran.readthedocs.io/en/latest/docs/intro_inventory.html" target="_blank" rel="noopener">中文文档</a></p>
+<p><a href="https://blog.csdn.net/yongchaocsdn/article/details/78750469" target="_blank" rel="noopener">ansible Ad-Hoc命令集</a></p>
+<p><a href="https://yangjinheng.github.io/2017/03/20/Linux/Ansible/" target="_blank" rel="noopener">金恒博客</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2019/12/13/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2019-12-13-Pycharm-free/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/13/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2019-12-13-Pycharm-free/" class="post-title-link" itemprop="url">Pycharm2018 破解</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2019-12-13 08:49:00" itemprop="dateCreated datePublished" datetime="2019-12-13T08:49:00+08:00">2019-12-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">个人工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2019/12/13/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2019-12-13-Pycharm-free/" class="post-meta-item leancloud_visitors" data-flag-title="Pycharm2018 破解" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="下载补丁文件"><a href="#下载补丁文件" class="headerlink" title="下载补丁文件"></a>下载补丁文件</h1><p><a href="https://pan.baidu.com/s/1mcQM8CLUnweY02ahKEr4PQ" target="_blank" rel="noopener">补丁文件地址：</a></p>
+<p>下载补丁文件后放置到任一目录下,建议放在pycharm安装目录, egg: <code>/home/hex/apps/pycharm-2018.3.6/</code></p>
+<h1 id="修改pycharm文件-安装目录bin下-pycharm64-vmoptions-和-pycharm-vmoptions-文件末尾追加一下内容"><a href="#修改pycharm文件-安装目录bin下-pycharm64-vmoptions-和-pycharm-vmoptions-文件末尾追加一下内容" class="headerlink" title="修改pycharm文件,安装目录bin下 pycharm64.vmoptions 和 pycharm.vmoptions, 文件末尾追加一下内容"></a>修改pycharm文件,安装目录bin下 <code>pycharm64.vmoptions</code> 和 <code>pycharm.vmoptions</code>, 文件末尾追加一下内容</h1><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 格式为 -javaagent:补丁的文件地址</span><br><span class="line">-javaagent:/home/hex/apps/pycharm-2018.3.6/JetbrainsCrack-release-enc.jar</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="启动pycharm-输入如下-Activation-code"><a href="#启动pycharm-输入如下-Activation-code" class="headerlink" title="启动pycharm, 输入如下 Activation code"></a>启动pycharm, 输入如下 <code>Activation code</code></h1><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">ThisCrackLicenseId-{</span><br><span class="line">“licenseId”:”1”,</span><br><span class="line">“licenseeName”:”Hex”,</span><br><span class="line">“assigneeName”:”Hex”,</span><br><span class="line">“assigneeEmail”:”892120992@qq.com”,</span><br><span class="line">“licenseRestriction”:””,</span><br><span class="line">“checkConcurrentUse”:false,</span><br><span class="line">“products”:[</span><br><span class="line">{“code”:”II”,”paidUpTo”:”2099-12-31”},</span><br><span class="line">{“code”:”DM”,”paidUpTo”:”2099-12-31”},</span><br><span class="line">{“code”:”AC”,”paidUpTo”:”2099-12-31”},</span><br><span class="line">{“code”:”RS0”,”paidUpTo”:”2099-12-31”},</span><br><span class="line">{“code”:”WS”,”paidUpTo”:”2099-12-31”},</span><br><span class="line">{“code”:”DPN”,”paidUpTo”:”2099-12-31”},</span><br><span class="line">{“code”:”RC”,”paidUpTo”:”2099-12-31”},</span><br><span class="line">{“code”:”PS”,”paidUpTo”:”2099-12-31”},</span><br><span class="line">{“code”:”DC”,”paidUpTo”:”2099-12-31”},</span><br><span class="line">{“code”:”RM”,”paidUpTo”:”2099-12-31”},</span><br><span class="line">{“code”:”CL”,”paidUpTo”:”2099-12-31”},</span><br><span class="line">{“code”:”PC”,”paidUpTo”:”2099-12-31”}</span><br><span class="line">],</span><br><span class="line">“hash”:”2911276/0”,</span><br><span class="line">“gracePeriodDays”:7,</span><br><span class="line">“autoProlongated”:false}</span><br></pre></td></tr></tbody></table></figure></body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2019/12/13/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-05-13-Pycharm-%E9%85%8D%E7%BD%AESftp%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/13/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-05-13-Pycharm-%E9%85%8D%E7%BD%AESftp%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91/" class="post-title-link" itemprop="url">Pycharm配置Sftp远程开发</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2019-12-13 08:49:00" itemprop="dateCreated datePublished" datetime="2019-12-13T08:49:00+08:00">2019-12-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">个人工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2019/12/13/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-05-13-Pycharm-%E9%85%8D%E7%BD%AESftp%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91/" class="post-meta-item leancloud_visitors" data-flag-title="Pycharm配置Sftp远程开发" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="配置pycharm-同步代码至docker容器"><a href="#配置pycharm-同步代码至docker容器" class="headerlink" title="配置pycharm 同步代码至docker容器"></a>配置pycharm 同步代码至docker容器</h1><p><a href="https://zhuanlan.zhihu.com/p/52827335" target="_blank" rel="noopener">参考连接</a></p>
+<h2 id="容器配置"><a href="#容器配置" class="headerlink" title="容器配置"></a>容器配置</h2><ol>
+<li>22端口暴露： <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name chartbackend -d -p 5556:5555 -p8022:22 reg.qloudhub.com/qloudpaas/chartbackend:latest4</span><br></pre></td></tr></tbody></table></figure></li>
+<li>安装配置ssh服务 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Ubuntu 16.04</span></span><br><span class="line">apt install openssh-server</span><br><span class="line"></span><br><span class="line">sed -i<span class="string">'s/PermitRootLogin prohibit-password/PermitRootLogin yes/'</span> /etc/ssh/sshd_config</span><br><span class="line"><span class="comment"># sed 's@sessions*requireds*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd</span></span><br><span class="line"><span class="comment"># echo "export VISIBLE=now" &gt;&gt; /etc/profile</span></span><br><span class="line">service ssh restart</span><br></pre></td></tr></tbody></table></figure></li>
+<li>设置容器用户名密码 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br><span class="line"><span class="comment"># 查看用户</span></span><br><span class="line">whoami</span><br></pre></td></tr></tbody></table></figure>
+
+</li>
+</ol>
+<h2 id="pycharm配置"><a href="#pycharm配置" class="headerlink" title="pycharm配置"></a>pycharm配置</h2><ol>
+<li>add sftp server<blockquote>
+<p>PyCharm  Tools &gt; Deployment &gt; Configuration</p>
+</blockquote>
+</li>
+</ol>
+<p><img alt="picture_sftp_setting_connect" data-src="https://tva1.sinaimg.cn/large/006hT4w1ly1g9v745f0xaj30md0iwgmi.jpg"></p>
+<p><img alt="picture_sftp_setting_mapping" data-src="https://tvax4.sinaimg.cn/large/006hT4w1ly1g9v74l9kpaj30mb0ivmxx.jpg"></p>
+<ol start="2">
+<li>set project interpreter use sftp’s<blockquote>
+<p>点击 PyCharm 的 File &gt; Setting &gt; Project &gt; Project Interpreter 右边的设置按钮新建一个项目的远程解释器：</p>
+</blockquote>
+</li>
+</ol>
+<p><img alt="picture_project_interpreter_use_sftp" data-src="https://tva3.sinaimg.cn/large/006hT4w1ly1g9v73161thj30yl0jidic.jpg"></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2017/12/19/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2019-06-23-hexo-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0Gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/12/19/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2019-06-23-hexo-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0Gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/" class="post-title-link" itemprop="url">为博客添加 Gitalk 评论插件</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2017-12-19 08:49:00" itemprop="dateCreated datePublished" datetime="2017-12-19T08:49:00+08:00">2017-12-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">个人工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2017/12/19/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2019-06-23-hexo-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0Gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="为博客添加 Gitalk 评论插件" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于 <strong>Disqus</strong> 对于国内网路的支持十分糟糕，很多人反映 Disqus 评论插件一直加载不出来。而我一直是处于翻墙状态的~（话说你们做程序员的都不翻墙用Google的吗😅，哈哈，吐嘈下）</p>
+<p>针对这个问题，我添加了<a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">Gitalk</a> 评论插件。在此，非常感谢 <a href="https://github.com/FeDemo" target="_blank" rel="noopener">@FeDemo</a> 的推荐 。</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="Gitalk-评论插件"><a href="#Gitalk-评论插件" class="headerlink" title="Gitalk 评论插件"></a>Gitalk 评论插件</h2><p>首先来看看 Gitalk 的界面和功能：</p>
+<p><a href="https://gitalk.github.io/" target="_blank" rel="noopener"><img alt="" data-src="https://ws4.sinaimg.cn/large/006tKfTcgy1fmm4u3j0lmj30nk0kl40i.jpg"></a></p>
+<p>gitalk 使用 Github 帐号登录，界面干净整洁，最喜欢的一点是支持 <code>MarkDown语法</code>。</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>Gitalk 是一个利用 Github API,基于 Github issue 和 Preact 开发的评论插件，在 Gitalk 之前还有一个 <a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">gitment</a> 插件也是基于这个原理开发的,不过 gitment 已经很久没人维护了。</p>
+<p>可以看到在 gitalk 的评论框进行评论时，其实就是在对应的 issue 上提问题。</p>
+<p><img alt="gitalk评论框" data-src="https://ws4.sinaimg.cn/large/006tKfTcgy1fmm5916av1j30i209rab7.jpg"></p>
+<p><img alt="Github issue" data-src="https://ws4.sinaimg.cn/large/006tKfTcgy1fmm596ggkfj30mx0gfjuk.jpg"></p>
+<h2 id="集成-Gitalk"><a href="#集成-Gitalk" class="headerlink" title="集成 Gitalk"></a>集成 Gitalk</h2><p>到这里，你应该对 Gitalk 有个大致的了解了，现在，开始集成 gitalk 插件吧。</p>
+<p>将这段代码插入到你的网站：</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Gitalk 评论 start  --&gt;</span></span><br><span class="line">{% if site.gitalk.enable %}</span><br><span class="line"><span class="comment">&lt;!-- Link Gitalk 的支持文件  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://unpkg.com/gitalk/dist/gitalk.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/gitalk@latest/dist/gitalk.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gitalk-container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> gitalk = <span class="keyword">new</span> Gitalk({</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="comment">// gitalk的主要参数</span></span></span><br><span class="line"><span class="javascript">		clientID: <span class="string">`Github Application clientID`</span>,</span></span><br><span class="line"><span class="javascript">		clientSecret: <span class="string">`Github Application clientSecret`</span>,</span></span><br><span class="line"><span class="javascript">		repo: <span class="string">`存储你评论 issue 的 Github 仓库名`</span>,</span></span><br><span class="line"><span class="actionscript">		owner: <span class="string">'Github 用户名'</span>,</span></span><br><span class="line"><span class="actionscript">		admin: [<span class="string">'Github 用户名'</span>],</span></span><br><span class="line"><span class="actionscript">		id: <span class="string">'页面的唯一标识，gitalk会根据这个标识自动创建的issue的标签'</span>,</span></span><br><span class="line">    </span><br><span class="line">    });</span><br><span class="line"><span class="actionscript">    gitalk.render(<span class="string">'gitalk-container'</span>);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">{% endif %}</span><br><span class="line"><span class="comment">&lt;!-- Gitalk end --&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>我们需要关心的就是配置下面几个参数：</p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">clientID:</span> <span class="string">`Github</span> <span class="string">Application</span> <span class="string">clientID`,</span></span><br><span class="line"><span class="attr">clientSecret:</span> <span class="string">`Github</span> <span class="string">Application</span> <span class="string">clientSecret`,</span></span><br><span class="line"><span class="attr">repo:</span> <span class="string">`Github</span> <span class="string">仓库名`,//存储你评论</span> <span class="string">issue</span> <span class="string">的</span> <span class="string">Github</span> <span class="string">仓库名（建议直接用</span> <span class="string">GitHub</span> <span class="string">Page</span> <span class="string">的仓库名）</span></span><br><span class="line"><span class="attr">owner:</span> <span class="string">'Github 用户名'</span><span class="string">,</span></span><br><span class="line"><span class="attr">admin:</span> <span class="string">['Github</span> <span class="string">用户名'],</span> <span class="string">//这个仓库的管理员，可以有多个，用数组表示，一般写自己,</span></span><br><span class="line"><span class="attr">id:</span> <span class="string">'window.location.pathname'</span><span class="string">,</span> <span class="string">//页面的唯一标识，gitalk</span> <span class="string">会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识</span></span><br></pre></td></tr></tbody></table></figure>
+<p>当然，还有其他很多参数，有兴趣的话可以 <a href="https://github.com/gitalk/gitalk#options" target="_blank" rel="noopener"> 点这里</a>。</p>
+<p>比如我就增加了这个全屏遮罩的参数。</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">distractionFreeMode: true,</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="创建-Github-Application"><a href="#创建-Github-Application" class="headerlink" title="创建 Github Application"></a>创建 Github Application</h2><p>Gitalk 需要一个 <strong>Github Application</strong>，<a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击这里申请</a>。</p>
+<p>填写下面参数：</p>
+<p><img alt="" data-src="https://ws1.sinaimg.cn/large/006tKfTcgy1fmm7jaib6fj30jo0gaacs.jpg"></p>
+<p>点击创建</p>
+<p>获取 <code>Client ID</code> 和 <code>Client Secret</code> 填入你的我们 Gitalk 参数中</p>
+<p><img alt="" data-src="https://ws1.sinaimg.cn/large/006tKfTcgy1fmm7jrzff6j30lc0budhp.jpg"></p>
+<p>当你参数都设置好，将代码推送到 Github 仓库后，没什么问题的话，当你点击进入你的博客页面后就会出现评论框了。</p>
+<p>当你用 github 帐号登录（管理员），并且第一次加载该会比较慢，因为第一次加载会自动在你 <code>repo</code> 的仓库下创建对应 issue。</p>
+<p>比如说这样：</p>
+<p><img alt="" data-src="https://ws2.sinaimg.cn/large/006tKfTcgy1fmm867n88cj30l809mjse.jpg"></p>
+<p><img alt="" data-src="https://ws4.sinaimg.cn/large/006tKfTcgy1fmm8a0i0jkj30rr0ct42t.jpg"></p>
+<p>当然，你也可以手动创建issue作为 gitalk评论容器。只要有 <code>Gitalk</code> 标签 和 <code>id</code> 对应标签就可以。比我我自己创建的 <a href="https://github.com/qiubaiying/qiubaiying.github.io/issues/38" target="_blank" rel="noopener">About issue</a> 。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>最后说几句吐嘈几句， Gitalk 需要你点开每篇文章的页面才会创建对应的 issue,对我来说真是个糟糕的体验（文章有点多~）。</p>
+<p>当然，也有解决办法，这篇 <a href="https://draveness.me/git-comments-initialize" target="_blank" rel="noopener">自动初始化 Gitalk 和 Gitment 评论</a>，就解决了这个问题。</p>
+<p>最后，<a href="https://github.com/qiubaiying/qiubaiying.github.io" target="_blank" rel="noopener">给个 star 吧</a>~</p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hex"
+      src="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+  <p class="site-author-name" itemprop="name">Hex</p>
+  <div class="site-description" itemprop="description">个人技术博客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">专栏</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hex-py" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hex-py" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hex</span>
+</div>
+
+        
+
+
+
+
+
+
+  <script pjax>
+  function leancloudSelector(url) {
+    return document.getElementById(url).querySelector('.leancloud-visitors-count');
+  }
+  if (CONFIG.page.isPost) {
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = visitors.getAttribute('id').trim();
+      var title = visitors.getAttribute('data-flag-title').trim();
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .then(response => response.json())
+              .then(() => {
+                leancloudSelector(url).innerText = counter.time + 1;
+              })
+              .catch(error => {
+                console.log('Failed to save visitor count', error);
+              })
+          } else {
+              Counter('post', '/classes/Counter', { title: title, url: url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.log('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  } else {
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return element.getAttribute('id').trim();
+      });
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length === 0) {
+            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
+              element.innerText = 0;
+            });
+            return;
+          }
+          for (let item of results) {
+            let { url, time } = item;
+            leancloudSelector(url).innerText = time;
+          }
+          for (let url of entries) {
+            var element = leancloudSelector(url);
+            if (element.innerText == '') {
+              element.innerText = 0;
+            }
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  }
+
+  fetch('https://app-router.leancloud.cn/2/route?appId=9XJtXrvzukg47QyRRTh3Rp1s-gzGzoHsz')
+    .then(response => response.json())
+    .then(({ api_server }) => {
+      var Counter = (method, url, data) => {
+        return fetch(`https://${api_server}/1.1${url}`, {
+          method: method,
+          headers: {
+            'X-LC-Id': '9XJtXrvzukg47QyRRTh3Rp1s-gzGzoHsz',
+            'X-LC-Key': 'yp4oGRDoJHNogXykGNIWlvCo',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.getAttribute('pjax') !== null) {
+      element.setAttribute('pjax', '');
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+
+  
+
+  
+
+  
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script>
+
+    </div>
+</body>
+</html>

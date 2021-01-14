@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#222">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic|Long Cang:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://hex-py.github.io').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: true,
+    pangu: true,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="个人技术博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hex Blog">
+<meta property="og:url" content="https://hex-py.github.io/page/5/index.html">
+<meta property="og:site_name" content="Hex Blog">
+<meta property="og:description" content="个人技术博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Hex">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://hex-py.github.io/page/5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Hex Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154554671-1"></script>
+    <script pjax>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-154554671-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hex Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle"> 大胆假设 小心求证 认真做事 严谨做人 </p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>博客首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>文章归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类专栏</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>各种标签</a>
+
+  </li>
+        
+            
+  <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-location-arrow"></i>关于更多</a>
+
+  </li>
+
+
+      
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>站点搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/06/28/devops-2020-06-28-Docker-%E7%90%86%E8%A7%A3%E5%AE%B9%E5%99%A8%E4%B8%AD%E7%9A%84uid%E5%92%8Cgid/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/28/devops-2020-06-28-Docker-%E7%90%86%E8%A7%A3%E5%AE%B9%E5%99%A8%E4%B8%AD%E7%9A%84uid%E5%92%8Cgid/" class="post-title-link" itemprop="url">Docker-理解容器中的uid和gid</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-06-28 09:36:19" itemprop="dateCreated datePublished" datetime="2020-06-28T09:36:19+08:00">2020-06-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Devops/" itemprop="url" rel="index">
+                    <span itemprop="name">Devops</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/06/28/devops-2020-06-28-Docker-%E7%90%86%E8%A7%A3%E5%AE%B9%E5%99%A8%E4%B8%AD%E7%9A%84uid%E5%92%8Cgid/" class="post-meta-item leancloud_visitors" data-flag-title="Docker-理解容器中的uid和gid" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><p>问题：<a href="https://nvd.nist.gov/vuln/detail/CVE-2019-11245" target="_blank" rel="noopener">安全漏洞 CVE-2019-11245 </a><br>容器中的进程默认以 root 用户权限运行，<br>Docker默认不启用user namespace, 所有的容器共用一个内核，所以内核控制的 uid 和 gid 则仍然只有一套。<br>如果容器内使用root用户，则容器内的进程与宿主机的root具有相同权限。会有很大的安全隐患，一旦容器有权限访问宿主机资源，则将具备宿主机root相同权限。</p>
+<p>解决方法：</p>
+<ul>
+<li><ol>
+<li>为容器中的进程指定一个具有合适权限的用户，而不要使用默认的 root 用户。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>应用 Linux 的 user namespace 技术，配置 docker 开启 user namespace 隔离用户。</li>
+</ol>
+</li>
+</ul>
+<h1 id="1-配置合适的用户"><a href="#1-配置合适的用户" class="headerlink" title="1. 配置合适的用户"></a>1. 配置合适的用户</h1><p>此处只讨论为进程指定合适用户，指定合适用户的方法有以下两种：</p>
+<ul>
+<li>在 <code>Dockerfile</code> 中指定用户身份</li>
+<li>在 <code>Pod Security Policies</code> 中指定用户身份</li>
+</ul>
+<blockquote>
+<p><code>Pod Security Policies</code>中的配置优先级更高，可以覆盖<code>Dockerfile</code>中的参数。</p>
+</blockquote>
+<h2 id="1-1-pod-securityContext-中-user只接受uid"><a href="#1-1-pod-securityContext-中-user只接受uid" class="headerlink" title="1.1 pod securityContext 中 user只接受uid"></a>1.1 pod securityContext 中 user只接受uid</h2><p><a href="https://github.com/kubernetes/kubernetes/issues/59819" target="_blank" rel="noopener">Issue with mustrunasnonroot implementation PR:56503 #59819</a></p>
+<h2 id="1-2-uid说明"><a href="#1-2-uid说明" class="headerlink" title="1.2 uid说明"></a>1.2 uid说明</h2><p>uid: 范围为0<del>65535（Ubuntu中为65533），0</del>999留给系统用户，普通用户为1000~65533. </p>
+<p>进程如果不声明uid，启动时以登录用户uid启动进程；进程可以声明任一存在或不存在的uid启动进程。<br>创建用户时若不指定uid, 默认就是直接从已存在的uid中找到最大的那个加1。</p>
+<p>综上，</p>
+<ul>
+<li>每个uid不一定有对应的用户</li>
+<li>每个用户一定有自己的uid</li>
+<li>每个进程必定有uid</li>
+<li>进程uid不指定，则与启动命令的用户uid一致</li>
+<li>创建用户uid不指定，则每多一个用户，uid会max+1递增。</li>
+</ul>
+<p>容器中的进程uid\gid与宿主机的一致</p>
+<h2 id="1-3-容器uid与宿主机冲突产生问题"><a href="#1-3-容器uid与宿主机冲突产生问题" class="headerlink" title="1.3 容器uid与宿主机冲突产生问题"></a>1.3 容器uid与宿主机冲突产生问题</h2><p>因为一个原因：</p>
+<p>当pod设置<code>runAsNoneroot</code>，容器uid与宿主机uid一样，但username不一致时。会触发报错<br><code>Error: container has runAsNonRoot and image has non-numeric user (kong), cannot verify user is non-root</code><br>原因待定位，现猜测 pod设置<code>runAsNoneroot</code>会获取容器uid,此时的user会变成宿主机的用户名，之后根据宿主机用户名在容器内获取uid时</p>
+<p>尽量要避免容器内的uid与宿主机的uid重复。所以建议在指定uid时，使用20000~65533的数值。</p>
+<h1 id="2-docker-开启user-namespace隔离用户"><a href="#2-docker-开启user-namespace隔离用户" class="headerlink" title="2. docker 开启user namespace隔离用户"></a>2. docker 开启<code>user namespace</code>隔离用户</h1><p><a href="https://www.cnblogs.com/sparkdev/p/9614326.html" target="_blank" rel="noopener">隔离 docker 容器中的用户</a></p>
+<h1 id="3-使用securityContext设置挂卷文件权限"><a href="#3-使用securityContext设置挂卷文件权限" class="headerlink" title="3. 使用securityContext设置挂卷文件权限"></a>3. 使用securityContext设置挂卷文件权限</h1><p>当设置runAsNoneRoot后，往往会带来权限问题。比如有些私有云挂卷后，权限默认给的755权限。此时普通用户没有写权限，导致无法使用。所以需要</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>Ubuntu下的用户权限</p>
+<p><a href="https://blog.csdn.net/u012668018/article/details/37727517" target="_blank" rel="noopener">Ubuntu下的用户权限</a></p>
+<p><a href="https://blog.csdn.net/loryliu/article/details/24228045" target="_blank" rel="noopener">/etc/passwd下的uid范围说明</a></p>
+<p><a href="https://blog.csdn.net/m0_37605642/article/details/97136282?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.pc_relevant_is_cache&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.pc_relevant_is_cache" target="_blank" rel="noopener">/etc/passwd详细解释</a></p>
+<p>容器这种uid说明</p>
+<p><a href="https://www.cnblogs.com/sparkdev/p/9614164.html" target="_blank" rel="noopener">理解 docker 容器中的 uid 和 gid</a></p>
+<p><a href="https://www.cnblogs.com/sparkdev/p/9614326.html" target="_blank" rel="noopener">隔离 docker 容器中的用户</a></p>
+<p><a href="https://medium.com/kubernetes-tutorials/defining-privileges-and-access-control-settings-for-pods-and-containers-in-kubernetes-2cef08fc62b7" target="_blank" rel="noopener">为pod设置权限和AccessControl</a></p>
+<p>理解 k8s 中 SecurityContext</p>
+<p><a href="https://kubernetes.io/zh/docs/tasks/configure-pod-container/security-context/" target="_blank" rel="noopener">k8s文档–为pod配置安全性上下文</a></p>
+<p><a href="https://developer.aliyun.com/article/777651" target="_blank" rel="noopener">源码剖析–SecurityContext</a></p>
+<p><strong><a href="https://www.cnblogs.com/woshimrf/p/understand-docker-uid.html" target="_blank" rel="noopener">docker挂载volume的用户权限问题</a></strong></p>
+<p><a href="https://stackoverflow.com/questions/47197493/docker-mounting-volume-permission-denied" target="_blank" rel="noopener">Docker mounting volume. Permission denied</a></p>
+<p>k8s挂载宿主机卷解决权限问题：securityContext fsgroup</p>
+<p>为非root用户启动的pod挂卷</p>
+<p><a href="https://github.com/moby/moby/issues/2259" target="_blank" rel="noopener">Add ability to mount volume as user other than root</a></p>
+<p><a href="https://github.com/kubernetes/kubernetes/issues/2630" target="_blank" rel="noopener">Volumes are created in container with root ownership and strict permissions</a></p>
+<p><a href="https://stackoverflow.com/questions/43544370/kubernetes-how-to-set-volumemount-user-group-and-file-permissions" target="_blank" rel="noopener">stack overflow k8s 设置挂卷的userGroup和文件权限</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/06/22/golang-2020-06-22-Go-Vault%E9%85%8D%E7%BD%AE%E8%B0%83%E7%94%A8vault%E7%9B%B8%E5%85%B3api/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/22/golang-2020-06-22-Go-Vault%E9%85%8D%E7%BD%AE%E8%B0%83%E7%94%A8vault%E7%9B%B8%E5%85%B3api/" class="post-title-link" itemprop="url">Go-Vault配置调用vault相关api</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-06-22 10:17:50" itemprop="dateCreated datePublished" datetime="2020-06-22T10:17:50+08:00">2020-06-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Golang/" itemprop="url" rel="index">
+                    <span itemprop="name">Golang</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/06/22/golang-2020-06-22-Go-Vault%E9%85%8D%E7%BD%AE%E8%B0%83%E7%94%A8vault%E7%9B%B8%E5%85%B3api/" class="post-meta-item leancloud_visitors" data-flag-title="Go-Vault配置调用vault相关api" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><h1 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h1><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{<span class="attr">"kind"</span>:<span class="string">"Config"</span>,<span class="attr">"apiVersion"</span>:<span class="string">"v1"</span>,<span class="attr">"preferences"</span>:{},<span class="attr">"clusters"</span>:[{<span class="attr">"name"</span>:<span class="string">"internalCluster"</span>,<span class="attr">"cluster"</span>:{<span class="attr">"server"</span>:<span class="string">"https://10.15.6.59:5443"</span>,<span class="attr">"certificate-authority-data"</span>:<span class="string">"LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMxakNDQWI2Z0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFiTVJrd0Z3WURWUVFLRXhCRFEwVWcKVkdWamFHNXZiRzluYVdWek1DQVhEVEl3TURReE9URXhORGswTkZvWUR6SXdOVEF3TkRFeU1URTBPVFEwV2pBYgpNUmt3RndZRFZRUUtFeEJEUTBVZ1ZHVmphRzV2Ykc5bmFXVnpNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DCkFROEFNSUlCQ2dLQ0FRRUF4cS85eS96VmhPVVVwV2p6NnVQZTZqVVl5YWdXR3dFNmJvVktXMzE3R0p4aGNQL1IKWnVOOVFORXhZRFdhSEhsRGkyY0NLYjJlK2U0M1pPejhKV3hxZk5lb1pMMmlETnVoRG41d2hTVm4vYmV4d2dTZgp5UXJ0UnpqZ1dHRjF3UWhBWjdnVWVLdHcweDNXUWZCUHFFWnJmVUlMMEkrTnNoRW1PZ1BUdlQwTzZyaktOSSt2CllPcC9ONjh4cEY4aFFRZDB4WnFpUWhzRzNyVFJ1R3lWalltRk9POG9oa0pUS3VtZTVGc1VZQ0k5UVRlMVkwc0EKM1AyTzBqbU1rVk5xdGN6YmJnNkx3NVhPWlZHT3BLbFJWUFJ5aDZ2VmlCRmVXNGl3U0xUL3RaTDJ4bjlORXZxQwpDVVdiZWhkcW1CMVFtLzhueERKVGl3ME5TR1hKSFE0SW1yaHhFd0lEQVFBQm95TXdJVEFPQmdOVkhROEJBZjhFCkJBTUNBcVF3RHdZRFZSMFRBUUgvQkFVd0F3RUIvekFOQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBY0R2ZWsxQVoKMEpHMTl2SUNPNUtFcXozTndlcC92MmVZWmgzZVpyb3VhL0VYMVM0aUQxaFFwMFBtczNtK2N2NDVLZ1pBMDJ1WQpadGppaWR5T21pNkJJZ2dSOFp3L2hwNmJ4SE8rcUV2MHpLK3NFdEM2WTBaTkJoT09vRGxZdkRjTVJFQ0dvbGtSClMxRDZDUzZoS1U3UUVPZHRuMlhHNHJwNUdKMm9XMGpoTTVCVW1wUE5nekw0WDJjeVBIU2JRb05wTk5ldisyOGMKSnY1bXlwV0tUcU8veVZvaE9MbkNIb255bnFlSk04V1FXUmM0WUVsSzhDTmJrR0l5L1RvRjhZb01hTng0OS84YgpLcVVQL1Y5Z1B5Wnk4Z25lSE9iRXBjNVFzRTU4MzUxNi9qU1JCWkJwS2grRTFxbjNCaGNyTDYvanlQKzBzMkdPCkxVWXhPbmFJYWJZS3lnPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="</span>}}],<span class="attr">"users"</span>:[{<span class="attr">"name"</span>:<span class="string">"user"</span>,<span class="attr">"user"</span>:{<span class="attr">"client-certificate-data"</span>:<span class="string">"LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUQrekNDQXVPZ0F3SUJBZ0lJWllJL3lhUmhuUFl3RFFZSktvWklodmNOQVFFTEJRQXdHekVaTUJjR0ExVUUKQ2hNUVEwTkZJRlJsWTJodWIyeHZaMmxsY3pBZ0Z3MHlNREEwTVRreE1UUTVORFJhR0E4eU1EVXdNRFF4TWpFeApORGswTmxvd01qRVhNQlVHQTFVRUNoTU9jM2x6ZEdWdE9tMWhjM1JsY25NeEZ6QVZCZ05WQkFNVERuTjVjM1JsCmJUcHRZWE4wWlhKek1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBeHEvOXkvelYKaE9VVXBXano2dVBlNmpVWXlhZ1dHd0U2Ym9WS1czMTdHSnhoY1AvUlp1TjlRTkV4WURXYUhIbERpMmNDS2IyZQorZTQzWk96OEpXeHFmTmVvWkwyaUROdWhEbjV3aFNWbi9iZXh3Z1NmeVFydFJ6amdXR0Yxd1FoQVo3Z1VlS3R3CjB4M1dRZkJQcUVacmZVSUwwSStOc2hFbU9nUFR2VDBPNnJqS05JK3ZZT3AvTjY4eHBGOGhRUWQweFpxaVFoc0cKM3JUUnVHeVZqWW1GT084b2hrSlRLdW1lNUZzVVlDSTlRVGUxWTBzQTNQMk8wam1Na1ZOcXRjemJiZzZMdzVYTwpaVkdPcEtsUlZQUnloNnZWaUJGZVc0aXdTTFQvdFpMMnhuOU5FdnFDQ1VXYmVoZHFtQjFRbS84bnhESlRpdzBOClNHWEpIUTRJbXJoeEV3SURBUUFCbzRJQktEQ0NBU1F3RGdZRFZSMFBBUUgvQkFRREFnV2dNQjBHQTFVZEpRUVcKTUJRR0NDc0dBUVVGQndNQ0JnZ3JCZ0VGQlFjREFUQ0I4Z1lEVlIwUkJJSHFNSUhuZ2hacmRXSmxjbTVsZEdWegpMbVJsWm1GMWJIUXVjM1pqZ2lScmRXSmxjbTVsZEdWekxtUmxabUYxYkhRdWMzWmpMbU5zZFhOMFpYSXViRzlqCllXeUNFbXQxWW1WeWJtVjBaWE11WkdWbVlYVnNkSUlLYTNWaVpYSnVaWFJsYzRJbmFYTjBhVzh0YzJsa1pXTmgKY2kxcGJtcGxZM1J2Y2k1cGMzUnBieTF6ZVhOMFpXMHVjM1pqaHhEOUFCSTBBQUFBQUFBQUFBQUFBQUFCaHdSLwpBQUFCaHdRSzl3QUNod1FLOXdBQmh3UmtSa0wwaHdUQXFPeGxod1JrUnJFU2h3VEFxT3ppaHdSa1JoY3pod1RBCnFPelRod1FLRHdiNWh3UUtEd2JhaHdRS0R3Wmpod1FLRHdZN01BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQmUKTmlqLzhYS29DbGYzbXFwVVplVzNmZW1JOVlDTkJzQW5FcEhBcWdrOWoveTB3RVU4b1F5d3NnbkdRUDdZREhuawpZRUJsWjYvOEVXZEFpSzFJa1VWSlRGcHpiWDlMd25yRXYreFc2L1ZNWXd5Mm1lR1lkMkVtUFcrb0ZsZkRrdDNSClBrTGJPeE1FYzJXaUd6MW1NT0UxMWRYQ3dLZ2dSUDhRZnhDeU5DZ0JCS3JEK1RyYUROb2FBSGJCRVR3YXlMRWkKck53RkpOdmh2QnFZK3lkZU8zVlFsamxaRm9KMlo0cStBQ3l1b1hUZnNkcnB2M0h3WkFYa2Y4Q0ZlSzdXV1lnWAptSzVYa1BobkNaWm9RV2RWU3Z1RjlicUN4eTVocWRuVGpLUVNETmNBWkdzVlRmQVpwYitKRjhGMHdIbzk0NGtNCmp1TUp5VzJwenJ3OXM4Z1ZIYXZ0Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"</span>,<span class="attr">"client-key-data"</span>:<span class="string">"LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFcFFJQkFBS0NBUUVBeHEvOXkvelZoT1VVcFdqejZ1UGU2alVZeWFnV0d3RTZib1ZLVzMxN0dKeGhjUC9SClp1TjlRTkV4WURXYUhIbERpMmNDS2IyZStlNDNaT3o4Sld4cWZOZW9aTDJpRE51aERuNXdoU1ZuL2JleHdnU2YKeVFydFJ6amdXR0Yxd1FoQVo3Z1VlS3R3MHgzV1FmQlBxRVpyZlVJTDBJK05zaEVtT2dQVHZUME82cmpLTkkrdgpZT3AvTjY4eHBGOGhRUWQweFpxaVFoc0czclRSdUd5VmpZbUZPTzhvaGtKVEt1bWU1RnNVWUNJOVFUZTFZMHNBCjNQMk8wam1Na1ZOcXRjemJiZzZMdzVYT1pWR09wS2xSVlBSeWg2dlZpQkZlVzRpd1NMVC90WkwyeG45TkV2cUMKQ1VXYmVoZHFtQjFRbS84bnhESlRpdzBOU0dYSkhRNEltcmh4RXdJREFRQUJBb0lCQVFDMGZjWFIzRUhmY3ZjNQplRWswMVlKNFFubmRIeHZOdG1UdFo1cHYyR0xOcmFuN0svbC9QU05Za1hFSVZFbEdtb1pZaWQvMktUTFZHcWtwCnZ2c2p5QVJJbXVSM2Q2bFJndWNoTW8xbTl0OHNKZ2FPR1FOS2IrbXpMS0RveU1oZTdlOE1DYlpYRkc3dTZnanMKWjdFRlRjdHh3MkRXT3NKZXc2TjFTbXE4VzA1RXZMT0RtbEF0dGsxcXlZMWdwYzlEa0d5Z1RPaEpQdWd2Vng0WgorUXh4YU9PUXNDN08rV3RMbkIxR0hnNmt2MDc0UzZLeVdKbkdXWnhKdHY5SEZ1dENTVkpqMjh5RXhobDBlSHkvCjU1a2E2SzVrak9FTnNMQTd0U2VlUUMwN3BsQUxIV2JCcm5yRGxOMlZ2NjkxR0wzVXV2VllaQnU4RG5QK0l5WUwKY3JsOHl3RHhBb0dCQVB1a3lOM0pBN2ZFT1BxUmNlQjVydUV5eHBxUVg2U1pjSmZSV1lXTW1hbWF6ZTdIOGcwNgozVko0dkhYdnRrcGVTVjRkbTdMQnVxRGZJNHkrWjRpVUhaTmozQVd4c3ZoNk9hMDNxUEtZMnYybzVDOXBQYlBHCjE3dld3eXJtazdmOGZoQjg0RjdkYXhVb2FHNW0zbS9FMDFaUU93RmhGaDF2cUwvVGdZQ1NCQXNwQW9HQkFNb2cKaFBjZGI0Ymh5RkdHMEtaZVluR3g4ZXF4eUdHQ0p6RFVTcHpBMlRPS20rRjBqeU5PTUxjMGxBcTlWTjgzTjRPTwowbkxMVXF4ZWRiVmtBK09BblBUTHB6WUJnQjJNcURqRCtkTlBSWmxVTUtLSlBFdEhSY05sekUyZEFNVFBNNXlUCkh3Wkp1aXpWWjIyV29DdVNoTFlwNnhVbnFjMnVQK1dxKzhPTExWM2JBb0dBVVhPMEpMMjArMTJEUisrZUdaZXAKZUhFMEFjR3JnNTY2NkJrMlRka0Z2L1ZBcFFLSklha2xERlhTUXFaVnJkcTVDc0t3cS9xekN2RlBFM1pxRXJaRwpvSGVaTnlxZWtIa1hoQzdZKzdWb1pPU3UvMzJrSURYRGpLUm1SZE9laXRZcWcvRzN1bDBYRlNFZ05HUU5xY1hlCjFqaGY4UUZZNUN4SlJkWVRPK2VIY1lrQ2dZRUFtVks3cWZ2eEtwN0FabDllaktUU0JpNldOSkp4VHMzOHpvUnEKcUtkODJ5VU1nNlA0SkM3ZXMwbzE5a09TU3RSR3p3dWF4YXRINWlxdEhWQmx4c0E3ejFGZ1lJNFkwZEZ0bGNuTApDeWg1d2dwajdoY3QzbWlOR2VCeGJucG5KK09JNGYrVHJDQm5FalU3QkowYW1KTEhDcXVYZ0crYTFjT1ZBckdGCjB0b1RLcnNDZ1lFQWpVZk5PQ3c1T1ZIanoyZGk2ZTRwV2J5azFLYjIramw2Y25EeGtGTUU2dDBxbXpWd1pId1kKNlRXb1JSakNROXd5WEhCL2JYaUtJQVl0b3NvWjVwT3c1MTdjZWhQS3JUaE5YSU1WdVBVWDBrZ0E1cWpqWmJSeQpTZVg2VGYveTM0NnQ0d0wrVFR6Y3F0WWViTnRwMG8yeWw0RDl1VWcyRjNNVWNjZUtJNnB2QmswPQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo="</span>}}],<span class="attr">"contexts"</span>:[{<span class="attr">"name"</span>:<span class="string">"internal"</span>,<span class="attr">"context"</span>:{<span class="attr">"cluster"</span>:<span class="string">"internalCluster"</span>,<span class="attr">"user"</span>:<span class="string">"user"</span>}}],<span class="attr">"current-context"</span>:<span class="string">"internal"</span>}</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/hashicorp/vault-helm/tree/v0.6.0" target="_blank" rel="noopener"><strong>Vault官方部署Chart</strong></a></p>
+<p><a href="https://learn.hashicorp.com/vault/kubernetes/minikube" target="_blank" rel="noopener"><strong>Vault官方部署说明</strong></a></p>
+<p><a href="https://github.com/hashicorp/docker-vault/blob/master/0.X/Dockerfile" target="_blank" rel="noopener">Vault官方镜像GitHub</a></p>
+<p><a href="https://www.hashicorp.com/blog/authenticating-applications-with-vault-approle/" target="_blank" rel="noopener">Vault官方博客–AppRole Auth</a></p>
+<p><a href="https://www.vaultproject.io/docs/auth/approle" target="_blank" rel="noopener">Vault官方文档-AppRole Auth</a></p>
+<p><a href="https://learn.hashicorp.com/vault/identity-access-management/approle#auth-methods" target="_blank" rel="noopener"><strong>Vault-AppRole配置使用说明</strong></a></p>
+<p><a href="https://www.vaultproject.io/api-docs/auth/approle" target="_blank" rel="noopener"><strong>Vault-AuthMethod-AppRole-API说明</strong></a></p>
+<p><a href="https://www.vaultproject.io/docs/secrets/databases" target="_blank" rel="noopener">Vault-SecretsEngine-Databases</a></p>
+<p><a href="https://www.vaultproject.io/docs/secrets/databases/cassandra" target="_blank" rel="noopener">Vault-SecretsEngine-Cassandra</a></p>
+<p><a href="https://www.vaultproject.io/docs/secrets/databases/mongodb" target="_blank" rel="noopener">Vault-SecretsEngine-MongoDB</a></p>
+<p><a href="https://www.vaultproject.io/docs/secrets/databases/mongodbatlas" target="_blank" rel="noopener">Vault-SecretsEngine-MongoDBAtlas</a></p>
+<p><a href="https://www.vaultproject.io/docs/secrets/databases/mysql-maria" target="_blank" rel="noopener">Vault-SecretsEngine-MySQL/MariaDB</a></p>
+<p><a href="https://www.vaultproject.io/docs/secrets/databases/elasticdb" target="_blank" rel="noopener">Vault-SecretsEngine-ElasticSearch</a></p>
+<p>Vault配置数据库秘钥引擎的三种方式，以postgresql举例:</p>
+<p><a href="https://learn.hashicorp.com/vault/secrets-management/sm-dynamic-secrets#step-3-create-a-role" target="_blank" rel="noopener"><strong>Vault-SecretsEngine-PostgreSQL-DynamicSecret</strong></a></p>
+<p><a href="https://learn.hashicorp.com/vault/secrets-management/db-creds-rotation" target="_blank" rel="noopener"><strong>Vault-SecretsEngine-PostgreSQL-StaticRoles</strong></a></p>
+<p><a href="https://learn.hashicorp.com/vault/secrets-management/db-root-rotation" target="_blank" rel="noopener"><strong>Vault-SecretsEngine-PostgreSQL-RootCredentialRotation</strong></a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/06/22/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2019-06-22-hexo-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/22/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2019-06-22-hexo-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/" class="post-title-link" itemprop="url">hexo常用命令备忘录</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-06-22 03:39:50" itemprop="dateCreated datePublished" datetime="2020-06-22T03:39:50+08:00">2020-06-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">个人工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/06/22/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2019-06-22-hexo-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/" class="post-meta-item leancloud_visitors" data-flag-title="hexo常用命令备忘录" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h1><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><strong><a href="https://oakland.github.io/2016/05/02/hexo-%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84post/" target="_blank" rel="noopener">Hexo生成Post: post、page、draft</a></strong></p>
+<p><a href="https://novnan.github.io/Hexo/hexo-draft/" target="_blank" rel="noopener">Hexo文章保存为草稿</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">Hexo+Github博客搭建小白教程</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/06/10/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-05-10-Ubuntu-18-04%E5%88%9D%E5%A7%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/10/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-05-10-Ubuntu-18-04%E5%88%9D%E5%A7%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">ubuntu18.04初始开发环境搭建</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-06-10 06:03:00" itemprop="dateCreated datePublished" datetime="2020-06-10T06:03:00+08:00">2020-06-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">个人工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/06/10/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-05-10-Ubuntu-18-04%E5%88%9D%E5%A7%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="post-meta-item leancloud_visitors" data-flag-title="ubuntu18.04初始开发环境搭建" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><p>最重要的事: 本文包括</p>
+<ol>
+<li>初始包安装；</li>
+<li>安装翻墙软件；</li>
+<li>安装docker；</li>
+<li>安装Goland开发环境gvm+golang-1.13；</li>
+<li>安装前端环境npm-nodejs-yarn；</li>
+<li>docker运行微信；</li>
+<li>安装finalshell；</li>
+<li>安装Goland并激活；</li>
+<li>安装其他，postman、typora、git-client、docker-compose等；</li>
+</ol>
+<h1 id="初始包安装"><a href="#初始包安装" class="headerlink" title="初始包安装"></a>初始包安装</h1><p>必备工具</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openssh-server curl unrar net-tools</span><br></pre></td></tr></tbody></table></figure>
+
+<p>为Gland准备</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libcanberra-gtk-module openjdk-11-jre-headless</span><br></pre></td></tr></tbody></table></figure>
+
+<p>为前端和Golang编译安装</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install curl git mercurial make binutils bison gcc build-essential</span><br></pre></td></tr></tbody></table></figure>
+
+<p>为搜狗输入法准备</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install fcitx-bin fcitx-table</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h1 id="显卡驱动（draft）"><a href="#显卡驱动（draft）" class="headerlink" title="显卡驱动（draft）"></a>显卡驱动（draft）</h1><p>卸载已存在驱动旧组件</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get purge nvidia*</span><br><span class="line">sudo apt-get autoremove</span><br><span class="line"><span class="comment"># 删除/etc/apt/sources.list.d下的相关记录</span></span><br><span class="line">sudo dpkg -P cuda-repo-ubuntu1404</span><br></pre></td></tr></tbody></table></figure>
+
+<p>下载驱动</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">wget http://us.download.nvidia.com/XFree86/Linux-x86_64/384.69/NVIDIA-Linux-x86_64-384.69.run</span><br></pre></td></tr></tbody></table></figure>
+
+<p>安装依赖</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用来编译驱动</span></span><br><span class="line">sudo apt install build-essential</span><br><span class="line"><span class="comment"># 用来支持32位系统(可选)</span></span><br><span class="line">sudo apt install gcc-multilib</span><br><span class="line"><span class="comment"># 用来提供dkms支持</span></span><br><span class="line">sudo apt install dkms</span><br><span class="line"><span class="comment"># 带图形显示的系统必须装，但一般都装过了(因为你已经能看到桌面，说明已经装好了)。server版的机器不用装(可选)</span></span><br><span class="line">sudo apt install xorg xorg-dev</span><br></pre></td></tr></tbody></table></figure>
+
+<p>安装驱动</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get nvidia-375 nvidia-modprobe</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h1 id="安装配置翻墙软件"><a href="#安装配置翻墙软件" class="headerlink" title="安装配置翻墙软件"></a>安装配置翻墙软件</h1><ol>
+<li>下载Qv2ray软件包</li>
+<li>下载v2ray核心软件包</li>
+<li>集成并配置订阅地址</li>
+<li>chrome配置</li>
+</ol>
+<h1 id="安装配置Docker"><a href="#安装配置Docker" class="headerlink" title="安装配置Docker"></a>安装配置Docker</h1><ol>
+<li>卸载机器上docker组件</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove docker docker-engine docker.io containerd runc</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="2">
+<li>安装Docker</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">sudo sh get-docker.sh</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="3">
+<li>解决Docker命令和socket文件权限问题</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将操作的用户加入docker组中</span></span><br><span class="line">sudo usermod -aG docker <span class="variable">${USER}</span></span><br><span class="line"><span class="comment"># 注销重新登录，或者执行下面命令来使改变生效</span></span><br><span class="line">newgrp docker</span><br><span class="line"><span class="comment"># 执行下面命令测试</span></span><br><span class="line">docker run hello-world</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="4">
+<li><p>配置国内镜像加速</p>
+<p>创建或修改 <code>/etc/docker/daemon.json</code>：</p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">    <span class="attr">"registry-mirrors"</span>: [</span><br><span class="line">        <span class="string">"https://1nj0zren.mirror.aliyuncs.com"</span>,</span><br><span class="line">        <span class="string">"https://docker.mirrors.ustc.edu.cn"</span>,</span><br><span class="line">        <span class="string">"http://f1361db2.m.daocloud.io"</span>,</span><br><span class="line">        <span class="string">"https://registry.docker-cn.com"</span></span><br><span class="line">    ]</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>重启docker服务</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></tbody></table></figure>
+
+<p>执行<code>docker info</code>命令，查看配置是否已生效。</p>
+</li>
+</ol>
+<h1 id="GVM-Go1-13"><a href="#GVM-Go1-13" class="headerlink" title="GVM+Go1.13"></a>GVM+Go1.13</h1><ol>
+<li>安装GVM</li>
+</ol>
+<blockquote>
+<p>如果下载超时的话，就尝试下搭个梯子。系统proxy不想配的话，就chrome配置好SwitchOMG，通过浏览器下载脚本。</p>
+</blockquote>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="2">
+<li>安装go1.4</li>
+</ol>
+<blockquote>
+<p>Go 1.5+从工具链中删除了C编译器，并用Go编写的代码替换了它们。 实现了自举。为了编译Go 1.5+，请确保先安装Go 1.4</p>
+</blockquote>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gvm install go1.4 -B</span><br><span class="line">gvm use go1.4</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="3">
+<li>安装go1.13</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GOROOT_BOOTSTRAP=<span class="variable">$GOROOT</span></span><br><span class="line">gvm intall go1.13</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="4">
+<li>others</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看本地版本</span></span><br><span class="line">gvm list</span><br><span class="line"><span class="comment"># 查看所有版本</span></span><br><span class="line">gvm listall</span><br><span class="line"><span class="comment"># 卸载gvm和所有go</span></span><br><span class="line">gvm implode</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h1 id="前端环境"><a href="#前端环境" class="headerlink" title="前端环境"></a>前端环境</h1><ol>
+<li>安装nvm</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载脚本并执行</span></span><br><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash</span><br><span class="line"><span class="comment"># 使修改在当前回话生效</span></span><br><span class="line"><span class="built_in">source</span> ~/.profile</span><br><span class="line"><span class="comment"># 检查nvm安装</span></span><br><span class="line">nvm --version</span><br><span class="line"><span class="comment"># list所有可用的nodejs版本(安装lts版本)</span></span><br><span class="line">nvm ls-remote</span><br><span class="line"><span class="comment"># list所有已安装的nodejs</span></span><br><span class="line">nvm list</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="2">
+<li>安装nodejs</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nvm install 10.15</span><br><span class="line"><span class="comment"># select 安装的nodejs</span></span><br><span class="line">nvm use 10.15</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查</span></span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="3">
+<li>安装yarn，npm</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">npm i -g npm --registry https://registry.npm.taobao.org</span><br><span class="line">npm i -g yarn --registry https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置yarn</span></span><br><span class="line">yarn config <span class="built_in">set</span> registry https://registry.npm.taobao.org -g</span><br><span class="line">yarn config <span class="built_in">set</span> sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g</span><br><span class="line"><span class="comment"># 设置npm</span></span><br><span class="line"><span class="built_in">export</span> NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node</span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h1 id="运行微信"><a href="#运行微信" class="headerlink" title="运行微信"></a>运行微信</h1><blockquote>
+<p>运行时有报错<code>MIT-SHM</code>，增加参数–ipc=host解决问题。</p>
+</blockquote>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">docker container run -d wechat \</span><br><span class="line">  --device /dev/snd \</span><br><span class="line">  -v /tmp/.X11-unix:/tmp/.X11-unix \</span><br><span class="line">  -v <span class="variable">${XDG_RUNTIME_DIR}</span>/pulse/native:<span class="variable">${XDG_RUNTIME_DIR}</span>/pulse/native \</span><br><span class="line">  -v <span class="variable">$HOME</span>:<span class="variable">$HOME</span> \</span><br><span class="line">  -v <span class="variable">$HOME</span>/WeChatFiles:/WeChatFiles \</span><br><span class="line">  -e DISPLAY=unix<span class="variable">${DISPLAY}</span> \</span><br><span class="line">  -e XMODIFIERS=@im=fcitx \</span><br><span class="line">  -e QT_IM_MODULE=fcitx \</span><br><span class="line">  -e GTK_IM_MODULE=fcitx \</span><br><span class="line">  -e AUDIO_GID=`getent group audio | cut -d: -f3` \</span><br><span class="line">  -e VIDEO_GID=`getent group video | cut -d: -f3` \</span><br><span class="line">  -e GID=`id -g` \</span><br><span class="line">  -e UID=`id -u` \</span><br><span class="line">  -e DPI=120 \</span><br><span class="line">  --ipc=host \</span><br><span class="line">  hoking007/wechat:latest</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h1 id="终端管理工具-–-FinalShell"><a href="#终端管理工具-–-FinalShell" class="headerlink" title="终端管理工具 – FinalShell"></a>终端管理工具 – FinalShell</h1><p>一键安装</p>
+<blockquote>
+<p>安装路径<code>/usr/lib/FinalShell/</code></p>
+<p>配置文件路径<code>/home/$USER/.finalshell/</code></p>
+</blockquote>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rm -f finalshell_install_linux.sh</span><br><span class="line">wget www.hostbuf.com/downloads/finalshell_install_linux.sh</span><br><span class="line">chmod +x finalshell_install_linux.sh</span><br><span class="line">./finalshell_install_linux.sh</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h1 id="安装配置Goland（draft）"><a href="#安装配置Goland（draft）" class="headerlink" title="安装配置Goland（draft）"></a>安装配置Goland（draft）</h1><p>下载安装包</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><ol>
+<li>安装最新git-client</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-add-repository ppa:git-core/ppa</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install git</span><br><span class="line"></span><br><span class="line"><span class="comment"># if `add-apt-repository` not found</span></span><br><span class="line"><span class="comment">## ubuntu 14.04</span></span><br><span class="line">sudo apt-get install software-properties-common</span><br><span class="line"><span class="comment">## ubuntu 13.10 or earlier</span></span><br><span class="line">sudo apt-get install python-software-properties</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="2">
+<li>安装最新docker-compose</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. remove the old version:</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## If installed via apt-get</span></span><br><span class="line">sudo apt-get remove docker-compose</span><br><span class="line"><span class="comment">## If installed via curl</span></span><br><span class="line">sudo rm /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line"><span class="comment">## If installed via pip</span></span><br><span class="line">pip uninstall docker-compose</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. install latest docker-compose</span></span><br><span class="line"></span><br><span class="line">VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | jq .name -r)</span><br><span class="line">DESTINATION=/usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line">sudo curl -L https://github.com/docker/compose/releases/download/<span class="variable">${VERSION}</span>/docker-compose-$(uname -s)-$(uname -m) -o <span class="variable">$DESTINATION</span></span><br><span class="line">sudo chmod 755 <span class="variable">$DESTINATION</span></span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="3">
+<li>安装typora</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install typora</span><br></pre></td></tr></tbody></table></figure>
+
+<ol start="4">
+<li>安装postman</li>
+</ol>
+<p>通过软件中心安装。</p>
+<ol start="5">
+<li>安装wps</li>
+</ol>
+<p>通过软件中心安装。</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>显卡驱动</p>
+<p><a href="https://gist.github.com/wangruohui/df039f0dc434d6486f5d4d098aa52d07" target="_blank" rel="noopener">安装NVIDIA驱动和CUDA在Linux上</a></p>
+<p><a href="https://www.maketecheasier.com/install-nvidia-drivers-ubuntu/" target="_blank" rel="noopener">安装最新版NVIDIA驱动在Ubuntu上</a></p>
+<p>GVM+GO</p>
+<p><a href="https://github.com/moovweb/gvm/tree/6ecd46d8b58c18f2a7bd5a1ab604cb57443cd35c#a-note-on-compiling-go-15" target="_blank" rel="noopener">GVM-github</a></p>
+<p><a href="https://github.com/moovweb/gvm/tree/6ecd46d8b58c18f2a7bd5a1ab604cb57443cd35c#debianubuntu" target="_blank" rel="noopener">安装golang的依赖-linux</a></p>
+<p><a href="https://github.com/moovweb/gvm#a-note-on-compiling-go-15" target="_blank" rel="noopener">GVM安装go1.4报错”go: command not found”</a></p>
+<p>Qv2ray</p>
+<p><a href="https://qv2ray.github.io/getting-started/step1.html" target="_blank" rel="noopener">Qv2ray-git博客</a></p>
+<p><a href="https://github.com/Alvin9999/new-pac/wiki" target="_blank" rel="noopener">翻墙相关的git项目  new-pac</a></p>
+<p>Docker</p>
+<p><a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank" rel="noopener">官方文档-在Ubuntu上安装Docker-Engine</a></p>
+<p><a href="https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user" target="_blank" rel="noopener">官方文档-在Ubuntu非root用户相关配置</a></p>
+<p><a href="https://blog.csdn.net/ternence_hsu/article/details/103949074" target="_blank" rel="noopener">Docker hub 设置代理服务器</a></p>
+<p>前端</p>
+<p><a href="https://hackernoon.com/how-to-install-node-js-on-ubuntu-16-04-18-04-using-nvm-node-version-manager-668a7166b854" target="_blank" rel="noopener">使用nvm安装nodejs</a></p>
+<p><a href="https://blog.csdn.net/jaket5219999/article/details/87882747#commentBox" target="_blank" rel="noopener">apt安装nodejs并配置</a></p>
+<p>微信</p>
+<p><a href="https://zhuanlan.zhihu.com/p/91327545?utm_source=wechat_session" target="_blank" rel="noopener">知乎-wine安装微信和QQ</a></p>
+<p><a href="https://github.com/bestwu/docker-wechat" target="_blank" rel="noopener">微信docker镜像-github</a></p>
+<p><a href="https://github.com/Hoking007/docker-deepin-wechat" target="_blank" rel="noopener">微信docker镜像-github-高分屏显示问题</a></p>
+<p><strong><a href="https://github.com/jessfraz/dockerfiles/issues/359" target="_blank" rel="noopener">微信docker镜像-github-<code>MIT-SHM</code> error solutions</a></strong></p>
+<p><a href="https://newtoypia.blogspot.com/2018/07/docker-gui.html" target="_blank" rel="noopener">使用docker运行GUI工具</a></p>
+<p><a href="https://stackoverflow.com/questions/16296753/can-you-run-gui-applications-in-a-docker-container" target="_blank" rel="noopener">使用docker运行GUI应用-stack-overflow</a></p>
+<p><strong><a href="https://github.com/osrf/docker_images/issues/21" target="_blank" rel="noopener">GUI不工作–报错<code>MIT-SHM</code></a></strong></p>
+<p>终端管理工具</p>
+<p><a href="http://www.hostbuf.com/t/1059.html" target="_blank" rel="noopener">FinalShell官网-Linux安装</a></p>
+<p><a href="https://www.cnblogs.com/byx1024/p/12144199.html" target="_blank" rel="noopener">FinalShell博客–使用说明</a></p>
+<p><a href="https://blog.csdn.net/mandagod/article/details/103663763" target="_blank" rel="noopener">FinalShell博客–建立隧道</a></p>
+<p>gotty+ssh/tmux实现web-xshell,并协同</p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/05/29/persistence-2020-05-29-Vault%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E5%B9%B6%E9%9B%86%E6%88%90consul/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/29/persistence-2020-05-29-Vault%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E5%B9%B6%E9%9B%86%E6%88%90consul/" class="post-title-link" itemprop="url">Vault集群部署并集成consul</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-05-29 12:30:22" itemprop="dateCreated datePublished" datetime="2020-05-29T12:30:22+08:00">2020-05-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Persistence/" itemprop="url" rel="index">
+                    <span itemprop="name">Persistence</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/05/29/persistence-2020-05-29-Vault%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2%E5%B9%B6%E9%9B%86%E6%88%90consul/" class="post-meta-item leancloud_visitors" data-flag-title="Vault集群部署并集成consul" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><p>最重要的事: </p>
+<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h1 id="2-环境准备"><a href="#2-环境准备" class="headerlink" title="2.环境准备"></a>2.环境准备</h1><h1 id="3-部署"><a href="#3-部署" class="headerlink" title="3.部署"></a>3.部署</h1><h1 id="4-使用"><a href="#4-使用" class="headerlink" title="4.使用"></a>4.使用</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1></body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/05/29/golang-2020-05-29-Go-Makefile%E7%BC%96%E5%86%99%E8%AF%B4%E6%98%8E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/29/golang-2020-05-29-Go-Makefile%E7%BC%96%E5%86%99%E8%AF%B4%E6%98%8E/" class="post-title-link" itemprop="url">Go-Makefile编写说明</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-05-29 12:28:36" itemprop="dateCreated datePublished" datetime="2020-05-29T12:28:36+08:00">2020-05-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Golang/" itemprop="url" rel="index">
+                    <span itemprop="name">Golang</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/05/29/golang-2020-05-29-Go-Makefile%E7%BC%96%E5%86%99%E8%AF%B4%E6%98%8E/" class="post-meta-item leancloud_visitors" data-flag-title="Go-Makefile编写说明" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><h1 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h1><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://github.com/jaegertracing/jaeger-operator/blob/master/Makefile" target="_blank" rel="noopener"><strong>commit生成changelog使用示例</strong></a></p>
+<p><a href="https://github.com/pavolloffay/github-changelog/blob/master/templates/all-labels.md" target="_blank" rel="noopener"><strong>github-changelog</strong></a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/05/29/golang-2020-05-29-Go-jwt%E5%8E%9F%E7%90%86%E5%92%8C%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/29/golang-2020-05-29-Go-jwt%E5%8E%9F%E7%90%86%E5%92%8C%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">Go-jwt原理和使用</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-05-29 11:54:03" itemprop="dateCreated datePublished" datetime="2020-05-29T11:54:03+08:00">2020-05-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Golang/" itemprop="url" rel="index">
+                    <span itemprop="name">Golang</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/05/29/golang-2020-05-29-Go-jwt%E5%8E%9F%E7%90%86%E5%92%8C%E4%BD%BF%E7%94%A8/" class="post-meta-item leancloud_visitors" data-flag-title="Go-jwt原理和使用" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><h1 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h1><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://tools.ietf.org/html/rfc7519" target="_blank" rel="noopener"><strong>JWT(JSON Web Token)协议说明</strong></a></p>
+<p><a href="https://www.cnblogs.com/wangshouchang/p/9551748.html" target="_blank" rel="noopener">JWT从入门到精通</a></p>
+<p><a href="https://jwt.io/" target="_blank" rel="noopener">jwt校验工具</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/05/29/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-05-29-Git-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/29/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-05-29-Git-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Git最佳实践+常用命令</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-05-29 11:47:48" itemprop="dateCreated datePublished" datetime="2020-05-29T11:47:48+08:00">2020-05-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">个人工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/05/29/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-05-29-Git-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-meta-item leancloud_visitors" data-flag-title="Git最佳实践+常用命令" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><p>最重要的事: </p>
+<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.cnblogs.com/cnblogsfans/p/5075073.html" target="_blank" rel="noopener">Git使用最佳实践</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/05/29/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-04-23-Ubuntu-18-04-%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8A%80%E5%B7%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/29/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-04-23-Ubuntu-18-04-%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">ubuntu系统配置+常用工具使用</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-05-29 11:44:12" itemprop="dateCreated datePublished" datetime="2020-05-29T11:44:12+08:00">2020-05-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">个人工具</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/05/29/%E4%B8%AA%E4%BA%BA%E5%B7%A5%E5%85%B7-2020-04-23-Ubuntu-18-04-%E4%BD%BF%E7%94%A8%E9%85%8D%E7%BD%AE%E6%8A%80%E5%B7%A7/" class="post-meta-item leancloud_visitors" data-flag-title="ubuntu系统配置+常用工具使用" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><p>最重要的事: </p>
+<h1 id="GoTTY–将终端共享为web应用"><a href="#GoTTY–将终端共享为web应用" class="headerlink" title="GoTTY–将终端共享为web应用"></a>GoTTY–将终端共享为web应用</h1><blockquote>
+<p>GoTTY是一个简单的命令行工具，可以将CLI工具转换为web应用程序</p>
+</blockquote>
+<p><a href="https://github.com/yudai/gotty#quick-sharing-on-tmux" target="_blank" rel="noopener">使用场景</a>：</p>
+<ol>
+<li>共享ssh   <code>gotty ssh 127.0.0.1</code></li>
+<li>共享ssh，并共享session   <code>gotty -w tmux new -s test</code></li>
+<li>共享docker，提供一个隔离的环境 <code>gotty -w docker run -it --rm busybox</code></li>
+</ol>
+<h1 id="Tmux–终端多路复用器"><a href="#Tmux–终端多路复用器" class="headerlink" title="Tmux–终端多路复用器"></a>Tmux–终端多路复用器</h1><blockquote>
+<p>通过tmux可以在一个终端上轻松地切换多个程序，分离它们(它们在后台运行)并重新连接到另一个终端.</p>
+</blockquote>
+<ol>
+<li><p>新建 session<br>命令<code>tmux new -s</code> 如 <code>tmux new -s &lt;session-name&gt;</code> </p>
+</li>
+<li><p>离开 session</p>
+<p>命令 <code>tmux detach</code> ； 快捷键 <code>ctrl + b</code> 然后 按 <code>d</code></p>
+</li>
+<li><p>查看 session 列表</p>
+<p>命令<code>tmux ls</code> ；快捷键操作 <code>ctrl + b</code> 然后 按<code>s</code> 列出所有的 session</p>
+</li>
+<li><p>进入 session</p>
+<p>离开 session 之后，有时候我们还需要对某个 session 进行操作，这时候可以通过如下的操作：<br><code>tmux attach -t &lt;session-name&gt;</code></p>
+</li>
+<li><p>关闭 session</p>
+<p>如果需要关闭 session, 可以通过执行如下的命令即可：<br><code>tmux kill-session -t &lt;session-name&gt;</code></p>
+</li>
+<li><p>切换 session</p>
+<p>  执行命令,可以从当前的 session 快速切换到另一个 session：<br>  <code>tmux switch -t</code></p>
+</li>
+<li><p>重命名 session</p>
+<p>   命令<code>tmux rename-session -t</code> 快捷键 <code>ctrl +d</code> 然后 按<code>$</code> 来重命名当前的session 。</p>
+</li>
+<li><p>切换窗口</p>
+<blockquote>
+<p>在同一个会话的多个窗口之间可以通过如下快捷键进行切换:</p>
+</blockquote>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>p</code> (previous的首字母) 切换到上一个window。</p>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>n</code> (next的首字母) 切换到下一个window。</p>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>0</code> 切换到0号window，依次类推，可换成任意窗口序号</p>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>w</code> (windows的首字母) 列出当前session所有window，通过上、下键切换窗口</p>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>l</code> (字母L的小写)相邻的window切换</p>
+<p>快捷键<code>ctrl+b</code>  然后 按<code>&amp;</code></p>
+</li>
+<li><p>分屏</p>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>%</code>， 垂直分屏</p>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>"</code>， 水平分屏</p>
+</li>
+<li><p>切换pane</p>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>o</code>， 依次切换当前窗口下的各个pane。</p>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>Up</code>|<code>Down</code>|<code>Left</code>|<code>Right</code> 根据按箭方向，选择切换到某个pane。</p>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>Space (空格键)</code>， 对当前窗口下的所有pane重新排列布局，每按一次，换一种样式。</p>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>z</code> ，最大化当前pane。再按一次后恢复。</p>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>x</code>，关闭pane：</p>
+</li>
+<li><p>帮助：</p>
+<p>快捷键<code>ctrl+b</code> 然后 按<code>？</code></p>
+</li>
+</ol>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>ubuntu配置<br><a href="https://blog.csdn.net/qq_24406903/article/details/86358105" target="_blank" rel="noopener">ubuntu18.10给应用程序添加快捷键</a><br><a href="https://zhuanlan.zhihu.com/p/46973701" target="_blank" rel="noopener">Linux 让终端走代理的几种方法</a><br>[ubuntu18.04 ]<br><a href="https://askubuntu.com/questions/1031699/open-in-terminal-in-ubuntu-18-04" target="_blank" rel="noopener">安装工具，’Open in Terminal’</a></p>
+<p>常用工具使用</p>
+<p>破坏性测试工具：<a href="https://github.com/pingcap/chaos-mesh" target="_blank" rel="noopener">chaos-mesh</a></p>
+<p>Kafaka客户端工具：<a href="https://github.com/birdayz/kaf" target="_blank" rel="noopener">kaf</a></p>
+<p>k8s切换集群、命名空间工具：<a href="https://github.com/ahmetb/kubectx" target="_blank" rel="noopener">kubectx</a>    <a href="https://blog.csdn.net/qq_19734597/article/details/98175134" target="_blank" rel="noopener">博客</a><br>k8s自动合并kubeconfig工具： <a href="https://blog.csdn.net/weixin_34026276/article/details/89572904" target="_blank" rel="noopener">mergeKubeConfig</a> </p>
+<p>完美替换terraform，支持Go和Python：<a href="https://www.pulumi.com/docs/intro/cloud-providers/vsphere/" target="_blank" rel="noopener">pulumi</a></p>
+<p>终端共享为WEB应用：<strong><a href="https://github.com/yudai/gotty" target="_blank" rel="noopener">gotty</a></strong></p>
+<p>终端共享为WEB应用：<a href="https://github.com/maxmcd/webtty" target="_blank" rel="noopener">webtty</a></p>
+<p>终端多路复用器：<a href="https://github.com/tmux/tmux/wiki" target="_blank" rel="noopener">tmux</a></p>
+<p>DevOPS工具：<br>独立编译镜像(without connect to docker-daemon)工具: <a href="https://github.com/GoogleContainerTools/kaniko#how-does-kaniko-work" target="_blank" rel="noopener">kaniko</a></p>
+<p>文件传输工具: <a href="https://github.com/schollz/croc?utm_source=gold_browser_extension" target="_blank" rel="noopener">croc</a></p>
+<p><a href="https://blog.csdn.net/weixin_41585557/article/details/83895584?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~baidu_landing_v2~default-2-83895584.nonecase&amp;utm_term=linux%E7%9B%AE%E5%BD%95%E6%9D%83%E9%99%90999" target="_blank" rel="noopener">Linux权限详解</a></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://hex-py.github.io/2020/05/29/kubernetes-2020-05-29-k8S-%E4%BA%91%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8%E6%A0%87%E5%87%86%E4%B8%8E%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+      <meta itemprop="name" content="Hex">
+      <meta itemprop="description" content="个人技术博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hex Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/29/kubernetes-2020-05-29-k8S-%E4%BA%91%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8%E6%A0%87%E5%87%86%E4%B8%8E%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">k8S-云原生应用标准与架构模型</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text"> </span>
+
+              <time title="创建时间：2020-05-29 11:42:00" itemprop="dateCreated datePublished" datetime="2020-05-29T11:42:00+08:00">2020-05-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">专栏：</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Kubernetes/" itemprop="url" rel="index">
+                    <span itemprop="name">Kubernetes</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/05/29/kubernetes-2020-05-29-k8S-%E4%BA%91%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8%E6%A0%87%E5%87%86%E4%B8%8E%E6%9E%B6%E6%9E%84%E6%A8%A1%E5%9E%8B/" class="post-meta-item leancloud_visitors" data-flag-title="k8S-云原生应用标准与架构模型" title="阅读">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <html><head></head><body><h1 id="重要"><a href="#重要" class="headerlink" title="重要"></a>重要</h1><h1 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h1><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><strong><a href="https://mp.weixin.qq.com/s?spm=a2c6h.12873639.0.0.66f95747byzLXw&amp;__biz=MzUzNzYxNjAzMg==&amp;mid=2247487823&amp;idx=1&amp;sn=d7423bb8184832333dd780359fa74fe6&amp;chksm=fae51a80cd929396fc10b7491ca3d57530719151652448a45a59317cec15c211b8d73c8119ef&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">4个概念，一个动作，让应用功能管理更简单</a></strong></p>
+</body></html>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hex"
+      src="https://tvax3.sinaimg.cn/large/006hT4w1ly1gabg2q14y4j30hs0hs3yu.jpg">
+  <p class="site-author-name" itemprop="name">Hex</p>
+  <div class="site-description" itemprop="description">个人技术博客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">专栏</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/hex-py" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hex-py" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hex</span>
+</div>
+
+        
+
+
+
+
+
+
+  <script pjax>
+  function leancloudSelector(url) {
+    return document.getElementById(url).querySelector('.leancloud-visitors-count');
+  }
+  if (CONFIG.page.isPost) {
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = visitors.getAttribute('id').trim();
+      var title = visitors.getAttribute('data-flag-title').trim();
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .then(response => response.json())
+              .then(() => {
+                leancloudSelector(url).innerText = counter.time + 1;
+              })
+              .catch(error => {
+                console.log('Failed to save visitor count', error);
+              })
+          } else {
+              Counter('post', '/classes/Counter', { title: title, url: url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.log('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  } else {
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return element.getAttribute('id').trim();
+      });
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length === 0) {
+            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
+              element.innerText = 0;
+            });
+            return;
+          }
+          for (let item of results) {
+            let { url, time } = item;
+            leancloudSelector(url).innerText = time;
+          }
+          for (let url of entries) {
+            var element = leancloudSelector(url);
+            if (element.innerText == '') {
+              element.innerText = 0;
+            }
+          }
+        })
+        .catch(error => {
+          console.log('LeanCloud Counter Error', error);
+        });
+    }
+  }
+
+  fetch('https://app-router.leancloud.cn/2/route?appId=9XJtXrvzukg47QyRRTh3Rp1s-gzGzoHsz')
+    .then(response => response.json())
+    .then(({ api_server }) => {
+      var Counter = (method, url, data) => {
+        return fetch(`https://${api_server}/1.1${url}`, {
+          method: method,
+          headers: {
+            'X-LC-Id': '9XJtXrvzukg47QyRRTh3Rp1s-gzGzoHsz',
+            'X-LC-Key': 'yp4oGRDoJHNogXykGNIWlvCo',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.getAttribute('pjax') !== null) {
+      element.setAttribute('pjax', '');
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+
+  
+
+  
+
+  
+<script src="//cdn.jsdelivr.net/npm/minigrid@3.1.1/dist/minigrid.min.js"></script>
+
+    </div>
+</body>
+</html>
