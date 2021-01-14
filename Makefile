@@ -6,6 +6,8 @@ k8s := kubernetes
 self := 个人工具
 ps := persistence
 
+bash := bash
+
 path := $($(type))/$(title)
 BUILD_TIME=`date +%F`
 FILE_NAME=$(BUILD_TIME)-$(TITLE).md
@@ -57,3 +59,8 @@ self:
 ps:
 	hexo new ps --path $(ps)/$(FILE_NAME) $(TITLE)
 	git add $(POST_PATH)/$(ps)/$(FILE_NAME)
+
+.PHONY: bash
+bash:
+	hexo new bash --path $(bash)/$(FILE_NAME) $(TITLE)
+	git add $(POST_PATH)/$(bash)/$(FILE_NAME)
